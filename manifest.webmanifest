@@ -8,43 +8,43 @@
   "start_url": "/medcenter/",
   "icons": [
     {
-      "src": "assets/icons/icon-72x72.png",
-      "sizes": "72x72",
+      "src": "assets/icons/medcenter-icon72x36.png",
+      "sizes": "72x36",
       "type": "image/png"
     },
     {
-      "src": "assets/icons/icon-96x96.png",
-      "sizes": "96x96",
+      "src": "assets/icons/medcenter-icon-96x48.png",
+      "sizes": "96x48",
       "type": "image/png"
     },
     {
-      "src": "assets/icons/icon-128x128.png",
-      "sizes": "128x128",
+      "src": "assets/icons/medcenter-icon-128x64.png",
+      "sizes": "128x64",
       "type": "image/png"
     },
     {
-      "src": "assets/icons/icon-144x144.png",
-      "sizes": "144x144",
+      "src": "assets/icons/medcenter-icon-144x72.png",
+      "sizes": "144x72",
       "type": "image/png"
     },
     {
-      "src": "assets/icons/icon-152x152.png",
-      "sizes": "152x152",
+      "src": "assets/icons/medcenter-icon-152x76.png",
+      "sizes": "152x76",
       "type": "image/png"
     },
     {
-      "src": "assets/icons/icon-192x192.png",
-      "sizes": "192x192",
+      "src": "assets/icons/medcenter-icon-192x96.png",
+      "sizes": "192x96",
       "type": "image/png"
     },
     {
-      "src": "assets/icons/icon-384x384.png",
-      "sizes": "384x384",
+      "src": "assets/icons/medcenter-icon-384x193.png",
+      "sizes": "384x193",
       "type": "image/png"
     },
     {
-      "src": "assets/icons/icon-512x512.png",
-      "sizes": "512x512",
+      "src": "assets/icons/medcenter-icon-512x257.png",
+      "sizes": "512x257",
       "type": "image/png"
     }
   ]

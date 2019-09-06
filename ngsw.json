@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1567725473497,
+  "timestamp": 1567728841409,
   "index": "/medcenter/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "/medcenter/favicon.ico",
         "/medcenter/index.html",
-        "/medcenter/main-es2015.558da081461253b48c2f.js",
-        "/medcenter/main-es5.da825be497be86209f3c.js",
+        "/medcenter/main-es2015.81ef3640e3b839a5746d.js",
+        "/medcenter/main-es5.96b454b73c0526a88431.js",
         "/medcenter/polyfills-es2015.27661dfa98f6332c27dc.js",
         "/medcenter/polyfills-es5.7f43b971448d2fb49202.js",
         "/medcenter/runtime-es2015.858f8dd898b75fe86926.js",
@@ -32,7 +32,15 @@
         "/medcenter/assets/icons/icon-384x384.png",
         "/medcenter/assets/icons/icon-512x512.png",
         "/medcenter/assets/icons/icon-72x72.png",
-        "/medcenter/assets/icons/icon-96x96.png"
+        "/medcenter/assets/icons/icon-96x96.png",
+        "/medcenter/assets/icons/medcenter-icon128x64.png",
+        "/medcenter/assets/icons/medcenter-icon144x72.png",
+        "/medcenter/assets/icons/medcenter-icon152x76.png",
+        "/medcenter/assets/icons/medcenter-icon192x96.png",
+        "/medcenter/assets/icons/medcenter-icon384x193.png",
+        "/medcenter/assets/icons/medcenter-icon512x257.png",
+        "/medcenter/assets/icons/medcenter-icon72x36.png",
+        "/medcenter/assets/icons/medcenter-icon96x48.png"
       ],
       "patterns": []
     }
@@ -47,10 +55,18 @@
     "/medcenter/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
     "/medcenter/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/medcenter/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/medcenter/assets/icons/medcenter-icon128x64.png": "6cc9c5674d6a84a351cbfe08c09a595e2d69a7b4",
+    "/medcenter/assets/icons/medcenter-icon144x72.png": "38e176f6dd7881084b611635c0b3afe468eaaebd",
+    "/medcenter/assets/icons/medcenter-icon152x76.png": "bdfa41ab4f193aae6ddf0c15ba981256ee00c04b",
+    "/medcenter/assets/icons/medcenter-icon192x96.png": "15d7243522ae2daa84b544ad33d3aebd958f781f",
+    "/medcenter/assets/icons/medcenter-icon384x193.png": "c2a5332e6448fa2c7a6d06cef7ac84dfa6570689",
+    "/medcenter/assets/icons/medcenter-icon512x257.png": "bb896e6a8d87c0ec0ed7becf9a544f8313807e75",
+    "/medcenter/assets/icons/medcenter-icon72x36.png": "cdf6f1656d0254d5e3a618ec3b75682e1bb5300b",
+    "/medcenter/assets/icons/medcenter-icon96x48.png": "0af893778f7f6e521a8a573393ca63d0327f03b3",
     "/medcenter/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/medcenter/index.html": "357586e8b5b4648495b93ad174679146ee26e759",
-    "/medcenter/main-es2015.558da081461253b48c2f.js": "e2628e75b6b635581e77eb3595e9b4b1e6f81064",
-    "/medcenter/main-es5.da825be497be86209f3c.js": "1644919d60b356dce7b39f029afb28a73701c7db",
+    "/medcenter/index.html": "7b625d974a5d3d0691f1794b418815be3fa9c791",
+    "/medcenter/main-es2015.81ef3640e3b839a5746d.js": "6899da1e9375cf5ea8c0b449edbe4f94d248a3b2",
+    "/medcenter/main-es5.96b454b73c0526a88431.js": "668d00973a2de4f25a8fbdbef4297b918d5a738a",
     "/medcenter/polyfills-es2015.27661dfa98f6332c27dc.js": "77f974dd2b186031cfc4f4526d96db4efcd39353",
     "/medcenter/polyfills-es5.7f43b971448d2fb49202.js": "f84a71ef6c7a788b5fe701bf2405313d7766a66d",
     "/medcenter/runtime-es2015.858f8dd898b75fe86926.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
