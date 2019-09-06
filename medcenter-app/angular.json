@@ -24,7 +24,8 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/md-theme.scss"
             ],
             "scripts": []
           },
