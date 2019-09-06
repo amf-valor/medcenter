@@ -9,42 +9,42 @@
   "icons": [
     {
       "src": "assets/icons/medcenter-icon72x36.png",
-      "sizes": "72x36",
+      "sizes": "72x72",
       "type": "image/png"
     },
     {
       "src": "assets/icons/medcenter-icon-96x48.png",
-      "sizes": "96x48",
+      "sizes": "96x96",
       "type": "image/png"
     },
     {
       "src": "assets/icons/medcenter-icon-128x64.png",
-      "sizes": "128x64",
+      "sizes": "128x128",
       "type": "image/png"
     },
     {
       "src": "assets/icons/medcenter-icon-144x72.png",
-      "sizes": "144x72",
+      "sizes": "144x144",
       "type": "image/png"
     },
     {
       "src": "assets/icons/medcenter-icon-152x76.png",
-      "sizes": "152x76",
+      "sizes": "152x152",
       "type": "image/png"
     },
     {
       "src": "assets/icons/medcenter-icon-192x96.png",
-      "sizes": "192x96",
+      "sizes": "192x192",
       "type": "image/png"
     },
     {
       "src": "assets/icons/medcenter-icon-384x193.png",
-      "sizes": "384x193",
+      "sizes": "384x384",
       "type": "image/png"
     },
     {
       "src": "assets/icons/medcenter-icon-512x257.png",
-      "sizes": "512x257",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]
