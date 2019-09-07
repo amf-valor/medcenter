@@ -2,7 +2,10 @@
     -webkit-box-shadow: 0 1px 1px #888888;
     -moz-box-shadow: 0 1px 1px #888888;
     box-shadow: 0 1px 1px #888888; 
-    height: 96px; 
+    height: 96px;
+    position: fixed; 
+    z-index:2;
+    background-color: white; 
 }
 
 a{
@@ -15,5 +18,4 @@ a:hover {
     color: white;
     background-color: #0BA85B;
     font-weight: bold;
-    font-size:1.3vw
 }
