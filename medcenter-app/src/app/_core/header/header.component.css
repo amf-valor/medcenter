@@ -1,3 +1,19 @@
-.logo-container{
-    padding-top: 2rem;
+.top-menu-container{
+    -webkit-box-shadow: 0 1px 1px #888888;
+    -moz-box-shadow: 0 1px 1px #888888;
+    box-shadow: 0 1px 1px #888888; 
+    height: 96px; 
+}
+
+a{
+    color: #0BA85B;
+    font-weight: bold;
+    font-size:1.3vw
+}
+
+a:hover {
+    color: white;
+    background-color: #0BA85B;
+    font-weight: bold;
+    font-size:1.3vw
 }

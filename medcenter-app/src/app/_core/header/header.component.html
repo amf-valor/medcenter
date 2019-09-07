@@ -1,5 +1,12 @@
-<mat-toolbar>
-    <div class="logo-container">
-        <img src="assets/icons/medcenter-icon144x72.png" />
+<mat-toolbar class="top-menu-container">
+    <img src="assets/icons/medcenter-icon128x64.png" />
+    <div fxLayout="row" 
+    fxLayoutAlign="end center" 
+    class="full-width">
+        <a mat-button [routerLink]="">Home</a>
+        <a mat-button [routerLink]="">Especialidades</a>
+        <a mat-button [routerLink]="">Exames</a>
+        <a mat-button [routerLink]="">MedCenter</a>
+        <a mat-button [routerLink]="">Contato</a> 
     </div>
 </mat-toolbar>
