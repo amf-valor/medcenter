@@ -1,0 +1,62 @@
+<section 
+fxLayout="row" 
+fxLayout.xs="column" 
+class="box-container">
+    <div 
+    fxLayout="column" 
+    fxLayoutGap="50px" 
+    fxLayoutAlign="start"
+    fxLayoutAlign.xs="center center"
+    class="box-container"
+    fxFlex="25">
+        <img  class="footer-logo" alt="medcenter-logo" src="assets/icons/medcenter-icon152x76.png" />
+        <div>
+            <i class="fas fa-map-marker-alt secondary-color"></i>
+            <span class="span-icon footer-text">    Endereço da clinica em guaianases, 578 | 00000-000</span> 
+        </div>
+    </div>
+    <mat-divider fxHide.xs [vertical]="true"></mat-divider>
+    <mat-divider fxHide.gt-xs></mat-divider>
+    <div fxFlex="20" fxLayout="column" class="box-container">
+        <h1 class="secondary-color">Social</h1>
+        <div fxLayout="row" fxLayoutGap="25px">
+            <i class="fab fa-2x fa-instagram secondary-color"></i>
+            <i class="fab fa-2x fa-facebook secondary-color"></i>
+            <i class="fab fa-2x fa-youtube secondary-color"></i>      
+        </div>
+    </div>
+    <mat-divider fxHide.xs [vertical]="true"></mat-divider>
+    <mat-divider fxHide.gt-xs></mat-divider>
+    <div fxFlex="35" fxLayout="column" class="box-container">
+        <h1 class="secondary-color">Duvidas?</h1>
+        <p class="footer-text">
+            Queremos te ouvir, se tiver qualquer dúvida
+            sugestão ou reclamação, é só nos <a [routerLink]="" class="secondary-color"><strong>contatar </strong></a>
+            ou ligue: <strong>(11) 99999-9999</strong>
+        </p>
+        <p class="footer-text">
+            <strong>Horario de atendimento:</strong> de segunda a sexta das 08:00 às 19:00<br/>
+            <strong>CNPJ: </strong>00.000.801/0001-48<br/>
+            <strong>Razão Social: </strong>MedCenter Guaianases 
+        </p>
+        <p class="footer-text">
+           Não atendemos emergencia.
+        </p>
+    </div>
+    <mat-divider fxHide.xs [vertical]="true"></mat-divider>
+    <mat-divider fxHide.gt-xs></mat-divider>
+    <div fxFlex="20" fxLayout="column" class="box-container">
+        <h1 class="secondary-color">Nosso Site</h1>
+        <div fxLayout="column" fxLayoutGap="15px">
+            <a [routerLink]="" class="footer-text"><strong>Agende On-line</strong></a>
+            <a [routerLink]="" class="footer-text"><strong>Home</strong></a>
+            <a [routerLink]="" class="footer-text"><strong>Especialidades</strong></a>
+            <a [routerLink]="" class="footer-text"><strong>Exames</strong></a>
+            <a [routerLink]="" class="footer-text"><strong>Conheça a clinica</strong></a>
+            <a [routerLink]="" class="footer-text"><strong>Contato</strong></a>    
+        </div>
+    </div>
+</section>
+<div fxLayout fxLayoutAlign="start" style="padding: 5vh" class="box-container">
+    <span class="footer-copy">Amfthoughts &copy; 2019</span>
+</div>

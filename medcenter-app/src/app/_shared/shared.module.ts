@@ -19,7 +19,8 @@ import {
   MatProgressBarModule, 
   MatProgressSpinnerModule, 
   MatSidenavModule,
-  MatListModule} from '@angular/material';
+  MatListModule,
+  MatDividerModule} from '@angular/material';
 
 @NgModule({
   declarations: [],
@@ -43,6 +44,7 @@ import {
     MatProgressBarModule,
     MatProgressSpinnerModule,
     MatListModule,
+    MatDividerModule,
     ReactiveFormsModule,
   ],
   exports:[
@@ -65,6 +67,7 @@ import {
     MatProgressBarModule,
     MatProgressSpinnerModule,
     MatListModule,
+    MatDividerModule,
     ReactiveFormsModule,
   ]
 })

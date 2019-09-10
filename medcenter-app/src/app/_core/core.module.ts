@@ -3,17 +3,26 @@ import { HeaderComponent } from './header/header.component';
 import { SharedModule } from '../_shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { SidenavItemsComponent } from './sidenav-items/sidenav-items.component';
+import { FooterComponent } from './footer/footer.component';
+import { ZapButtonComponent } from './zap-button/zap-button.component';
 
 @NgModule({
   declarations: [
     HeaderComponent, 
-    SidenavItemsComponent
+    SidenavItemsComponent, 
+    FooterComponent, 
+    ZapButtonComponent
   ],
   imports: [
     RouterModule,
     SharedModule
   ],
-  exports: [HeaderComponent, SidenavItemsComponent]
+  exports: [
+    HeaderComponent, 
+    SidenavItemsComponent,
+    FooterComponent,
+    ZapButtonComponent
+  ]
 })
 export class CoreModule { 
   constructor( @Optional() @SkipSelf() parentModule: CoreModule) {

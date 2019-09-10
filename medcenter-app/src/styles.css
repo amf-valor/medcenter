@@ -7,6 +7,10 @@ h1{
     font-weight: 500;
 }
 
+strong{
+    font-weight: 600;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
 }
@@ -17,6 +21,10 @@ body{
 
 .primary-color{
     color: #0BA85B;
+}
+
+.secondary-color{
+    color:#F44336; 
 }
 
 .primary-bg{
@@ -31,7 +39,16 @@ body{
     color: white
 }
 
-
 .full-height{
     height: 100%;
+}
+
+.box-container{
+    padding: 10vh;
+}
+
+@media screen and (max-width: 600px) {
+    .box-container{
+        padding: 5vh;
+    }
 }

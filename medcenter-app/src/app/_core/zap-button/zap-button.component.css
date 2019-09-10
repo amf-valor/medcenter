@@ -1,0 +1,26 @@
+.zap-button{
+    position: fixed;
+    left: 93%;
+    top: 88%;
+    width: 57px;
+    height: 57px;
+    background-color:#0BA85B; 
+}
+.zap-icon{
+    margin-top: -9px
+}
+
+@media screen and (max-width: 600px) {
+    .zap-button{
+        position: fixed;
+        left: 82%;
+        top: 83%;
+        width: 57px;
+        height: 57px;
+        background-color:#0BA85B;
+    }
+
+    .zap-icon{
+        margin-top: -9px
+    }
+}
