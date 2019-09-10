@@ -1,18 +1,46 @@
-.banner{
-    width: 100%; 
-    margin-top:96px;
+a{
+    text-decoration: none;
 }
 
 .banner-container{
-    position: relative;
-    text-align: center;
     color: white;
+    margin-top:16vh;
+    background-image: url(/assets/images/banner-home-xl-verde.webp);
+    height: 100vh;
 }
 
 .banner-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size:2.5em;
+    font-size:3em;
+    text-align: center;
+    padding: 5em; 
   }
+
+.banner-text-xs {
+    font-size:3em;
+    text-align: center;
+    padding-top: 2em; 
+}
+
+.service-container{
+    padding: 20vh 5vh 20vh 5vh;
+}
+
+.container{
+    padding: 10vh;
+}
+
+.reviews{
+    background-color: #EEEEEE
+}
+
+.review-item{
+    max-width: 200px;
+}
+
+.avatar-img{
+    background-image: url('/assets/images/review-idosa400x260.png');
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+}
+

@@ -17,7 +17,9 @@ import {
   MatCardModule,  
   MatDatepickerModule, 
   MatProgressBarModule, 
-  MatProgressSpinnerModule } from '@angular/material';
+  MatProgressSpinnerModule, 
+  MatSidenavModule,
+  MatListModule} from '@angular/material';
 
 @NgModule({
   declarations: [],
@@ -35,10 +37,12 @@ import {
     MatIconModule,
     MatTabsModule,
     MatDatepickerModule,
+    MatSidenavModule,
     FormsModule,
     MatCardModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
+    MatListModule,
     ReactiveFormsModule,
   ],
   exports:[
@@ -55,10 +59,12 @@ import {
     MatIconModule,
     MatTabsModule,
     MatDatepickerModule,
+    MatSidenavModule,
     FormsModule,
     MatCardModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
+    MatListModule,
     ReactiveFormsModule,
   ]
 })

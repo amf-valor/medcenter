@@ -1,12 +1,32 @@
-<mat-toolbar class="top-menu-container">
-    <img alt="medcenter-logo" src="assets/icons/medcenter-icon128x64.png" />
-    <div fxLayout="row" 
-    fxLayoutAlign="end center" 
-    class="full-width">
-        <a mat-button [routerLink]="">Home</a>
-        <a mat-button [routerLink]="">Especialidades</a>
-        <a mat-button [routerLink]="">Exames</a>
-        <a mat-button [routerLink]="">MedCenter</a>
-        <a mat-button [routerLink]="">Contato</a> 
+<mat-toolbar class="navigation-container">
+    <div fxLayout fxLayoutAlign="start" fxHide.gt-xs>
+        <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon class="primary-color navigation-icon">menu</mat-icon>
+        </button>
+    </div>
+    <div class ="full-width" fxLayout fxLayoutAlign.xs="center" fxHide.gt-xs>
+        <img alt="medcenter-logo" src="assets/icons/medcenter-icon128x64.png" />
+    </div>
+    <div fxHide.xs>
+        <img class="full-width" alt="medcenter-logo" src="assets/icons/medcenter-icon128x64.png" />
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+            <li>
+                <a mat-button routerLink="">Home</a>
+            </li>
+            <li>
+                <a mat-button [routerLink]="">Especialidades</a>
+            </li>
+            <li>
+                <a mat-button [routerLink]="">Exames</a>
+            </li>
+            <li>
+                <a mat-button [routerLink]="">MedCenter</a>
+            </li>
+            <li>
+                <a mat-button [routerLink]="">Contato</a>
+            </li>
+        </ul>
     </div>
 </mat-toolbar>
