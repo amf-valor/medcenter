@@ -1,7 +1,7 @@
 .navigation-container{
-    -webkit-box-shadow: 0 1px 1px #888888;
-    -moz-box-shadow: 0 1px 1px #888888;
-    box-shadow: 0 1px 1px #888888; 
+    -webkit-box-shadow: 0 4px 4px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 4px 4px rgba(0,0,0,.25);
+    box-shadow: 0 4px 4px rgba(0,0,0,.25);
     position: fixed; 
     z-index:2;
     background-color: white;
