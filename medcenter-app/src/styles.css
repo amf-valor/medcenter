@@ -27,12 +27,24 @@ body{
     color:#F44336; 
 }
 
+.third-color{
+    color:#fff;
+}
+
+.text-muted{
+    color: #9E9E9E;
+}
+
 .primary-bg{
     background-color: #0BA85B;
 }
 
 .secondary-bg{
     background-color:#F44336; 
+}
+
+.third-bg{
+    background-color: #EEEEEE;
 }
 
 .text-white{

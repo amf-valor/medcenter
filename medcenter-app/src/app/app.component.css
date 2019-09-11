@@ -5,3 +5,7 @@ mat-sidenav-container, mat-sidenav-content, mat-sidenav {
 mat-sidenav {
     width: 80%;
 }
+
+main{
+    margin-top:16vh;
+}

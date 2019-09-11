@@ -6,11 +6,13 @@ import { environment } from '../environments/environment';
 import { SharedModule } from './_shared/shared.module';
 import { CoreModule } from './_core/core.module';
 import { HomeComponent } from './home/home.component';
+import { EspecialidadesComponent } from './especialidades/especialidades.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    EspecialidadesComponent
   ],
   imports: [
     SharedModule,
