@@ -1,0 +1,22 @@
+.banner-container{
+    background-image: url(/assets/images/medcenter-clinica1024.webp);
+    background-size: cover;
+    height: 100vh;
+}
+
+.img-box{
+    width: 100%; 
+    border-radius: 4px;
+}
+
+.doctor-item{
+    max-width: 400px;
+}
+
+.social-media{
+    background-image: -webkit-linear-gradient(left, #7ace4c 0%, #017e9d 100%);
+    background-image: linear-gradient(to right, #7ace4c 0%, #017e9d 100%);
+    background-repeat: repeat-x;
+    color: #fff;
+    border-radius: 4px;
+}

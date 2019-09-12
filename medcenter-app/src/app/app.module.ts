@@ -8,13 +8,15 @@ import { CoreModule } from './_core/core.module';
 import { HomeComponent } from './home/home.component';
 import { EspecialidadesComponent } from './especialidades/especialidades.component';
 import { ExamesComponent } from './exames/exames.component';
+import { MedcenterComponent } from './medcenter/medcenter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     EspecialidadesComponent,
-    ExamesComponent
+    ExamesComponent,
+    MedcenterComponent
   ],
   imports: [
     SharedModule,
