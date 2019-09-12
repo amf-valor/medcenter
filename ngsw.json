@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1568305317274,
+  "timestamp": 1568305992048,
   "index": "/medcenter/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "/medcenter/favicon.ico",
         "/medcenter/index.html",
-        "/medcenter/main-es2015.6cf93b87cedc77bcabda.js",
-        "/medcenter/main-es5.308ee2795670a09b0ce7.js",
+        "/medcenter/main-es2015.fe1965da9ce7136c6974.js",
+        "/medcenter/main-es5.64143750573be106fedb.js",
         "/medcenter/polyfills-es2015.27661dfa98f6332c27dc.js",
         "/medcenter/polyfills-es5.7f43b971448d2fb49202.js",
         "/medcenter/runtime-es2015.858f8dd898b75fe86926.js",
@@ -45,6 +45,7 @@
         "/medcenter/assets/images/medcenter-clinica800x534.png",
         "/medcenter/assets/images/review-idosa400x260.png",
         "/medcenter/banner-home1920.cb32546524d1fd50a41b.webp",
+        "/medcenter/medcenter-clinica1024.1cade656439a69a7f01d.webp",
         "/medcenter/review-idosa400x260.26d27794a56fb16a6934.png"
       ],
       "patterns": []
@@ -73,9 +74,10 @@
     "/medcenter/assets/images/review-idosa400x260.png": "7346997e224fe6461e19b20aadd9de1db53f9db0",
     "/medcenter/banner-home1920.cb32546524d1fd50a41b.webp": "23b02dedc86d9b6e864560835d569940c304978c",
     "/medcenter/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/medcenter/index.html": "109d8ab05edc422299e40f80558e09a5e2d529dd",
-    "/medcenter/main-es2015.6cf93b87cedc77bcabda.js": "eb347cfaf37d81ebd59caa66de9164d3582f98eb",
-    "/medcenter/main-es5.308ee2795670a09b0ce7.js": "aadc8ff5e515e4166e2b9aa553fe19b70bb5fdc0",
+    "/medcenter/index.html": "be03a341f8d1d0af90aea998a28a6cb83800ce3f",
+    "/medcenter/main-es2015.fe1965da9ce7136c6974.js": "5039aaed7dd0a354c4a7e0299055d570e9d131d9",
+    "/medcenter/main-es5.64143750573be106fedb.js": "d382bd3096108a0eb0de316b80bdb40a6a06fe48",
+    "/medcenter/medcenter-clinica1024.1cade656439a69a7f01d.webp": "f6e5a43221825c62e1c0f2862361e119917a01ee",
     "/medcenter/polyfills-es2015.27661dfa98f6332c27dc.js": "77f974dd2b186031cfc4f4526d96db4efcd39353",
     "/medcenter/polyfills-es5.7f43b971448d2fb49202.js": "f84a71ef6c7a788b5fe701bf2405313d7766a66d",
     "/medcenter/review-idosa400x260.26d27794a56fb16a6934.png": "7346997e224fe6461e19b20aadd9de1db53f9db0",
