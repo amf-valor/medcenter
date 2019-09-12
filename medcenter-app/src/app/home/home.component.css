@@ -44,3 +44,35 @@ a{
     height: 200px;
 }
 
+.call-square{
+    width: 35%;
+    height: 40%;
+    background-color: teal;
+    border-radius: 4px;
+    -webkit-box-shadow: 10px 10px 20px rgba(0,0,0,.25);
+    box-shadow: 10px 10px 20px rgba(0,0,0,.25);
+}
+
+.call-text{
+    font-size: 1.5em; 
+    padding: 10px; 
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .call-square{
+        width: 50%;
+        height: 30%;
+        background-color: teal;
+        border-radius: 4px;
+        -webkit-box-shadow: 10px 10px 20px rgba(0,0,0,.25);
+        box-shadow: 10px 10px 20px rgba(0,0,0,.25);
+    }
+    
+    .call-text{
+        font-size: 0.9em;
+        padding: 10px; 
+        text-align: center;
+    }    
+}
+
