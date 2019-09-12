@@ -4,7 +4,7 @@ a{
 
 .banner-container{
     color: white;
-    background-image: url(/assets/images/banner-home1920.webp);
+    background-image: url('../../assets/images/banner-home1920.webp');
     background-size: cover;
     height: 100vh;
 }
@@ -38,7 +38,7 @@ a{
 }
 
 .avatar-img{
-    background-image: url('/assets/images/review-idosa400x260.png');
+    background-image: url('../../assets/images/review-idosa400x260.png');
     background-size: cover;
     width: 200px;
     height: 200px;
