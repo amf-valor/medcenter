@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { EspecialidadesComponent } from './especialidades/especialidades.component';
 import { ExamesComponent } from './exames/exames.component';
 import { MedcenterComponent } from './medcenter/medcenter.component';
+import { ContatoComponent } from './contato/contato.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MedcenterComponent } from './medcenter/medcenter.component';
     HomeComponent,
     EspecialidadesComponent,
     ExamesComponent,
-    MedcenterComponent
+    MedcenterComponent,
+    ContatoComponent
   ],
   imports: [
     SharedModule,
