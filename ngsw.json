@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1568307120597,
+  "timestamp": 1568668657454,
   "index": "/medcenter/index.html",
   "assetGroups": [
     {
@@ -10,13 +10,13 @@
       "urls": [
         "/medcenter/favicon.ico",
         "/medcenter/index.html",
-        "/medcenter/main-es2015.62de330b5f3e3bb447d2.js",
-        "/medcenter/main-es5.fc03b08311a955d7b53f.js",
+        "/medcenter/main-es2015.2cd6cd221b8d50ea18ae.js",
+        "/medcenter/main-es5.91ce4389313d9ff68292.js",
         "/medcenter/polyfills-es2015.27661dfa98f6332c27dc.js",
         "/medcenter/polyfills-es5.7f43b971448d2fb49202.js",
         "/medcenter/runtime-es2015.858f8dd898b75fe86926.js",
         "/medcenter/runtime-es5.741402d1d47331ce975c.js",
-        "/medcenter/styles.c4b5d7ea217734e69fc7.css"
+        "/medcenter/styles.c523fc14750a0576708e.css"
       ],
       "patterns": []
     },
@@ -74,16 +74,16 @@
     "/medcenter/assets/images/review-idosa400x260.png": "7346997e224fe6461e19b20aadd9de1db53f9db0",
     "/medcenter/banner-home1920.cb32546524d1fd50a41b.webp": "23b02dedc86d9b6e864560835d569940c304978c",
     "/medcenter/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/medcenter/index.html": "ca6ec034e5bf8ad28200252e2bdd2a7e5446014d",
-    "/medcenter/main-es2015.62de330b5f3e3bb447d2.js": "eb817f9a60609ee9e64420e46e30f0563d8c3696",
-    "/medcenter/main-es5.fc03b08311a955d7b53f.js": "588b1793a52b18bcd8effe185fd634b11bbf4a88",
+    "/medcenter/index.html": "6a6cab0df67634f022e8c344db77b2403784850f",
+    "/medcenter/main-es2015.2cd6cd221b8d50ea18ae.js": "719c817035541141c2b222b9d5325f14ba0585f1",
+    "/medcenter/main-es5.91ce4389313d9ff68292.js": "a500c5eee6d16f18a6920abae804ae17f47b3611",
     "/medcenter/medcenter-clinica1024.1cade656439a69a7f01d.webp": "f6e5a43221825c62e1c0f2862361e119917a01ee",
     "/medcenter/polyfills-es2015.27661dfa98f6332c27dc.js": "77f974dd2b186031cfc4f4526d96db4efcd39353",
     "/medcenter/polyfills-es5.7f43b971448d2fb49202.js": "f84a71ef6c7a788b5fe701bf2405313d7766a66d",
     "/medcenter/review-idosa400x260.26d27794a56fb16a6934.png": "7346997e224fe6461e19b20aadd9de1db53f9db0",
     "/medcenter/runtime-es2015.858f8dd898b75fe86926.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
     "/medcenter/runtime-es5.741402d1d47331ce975c.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
-    "/medcenter/styles.c4b5d7ea217734e69fc7.css": "194934d7c734566ce0f43f4a936a667cbf25403e"
+    "/medcenter/styles.c523fc14750a0576708e.css": "30aa1ba08a42c574b8f5ff7321cee877629953b3"
   },
   "navigationUrls": [
     {
