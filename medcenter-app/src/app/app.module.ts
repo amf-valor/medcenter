@@ -10,6 +10,7 @@ import { EspecialidadesComponent } from './especialidades/especialidades.compone
 import { ExamesComponent } from './exames/exames.component';
 import { MedcenterComponent } from './medcenter/medcenter.component';
 import { ContatoComponent } from './contato/contato.component';
+import { OdontologiaComponent } from './odontologia/odontologia.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContatoComponent } from './contato/contato.component';
     EspecialidadesComponent,
     ExamesComponent,
     MedcenterComponent,
-    ContatoComponent
+    ContatoComponent,
+    OdontologiaComponent
   ],
   imports: [
     SharedModule,

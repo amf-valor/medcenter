@@ -1,0 +1,121 @@
+<div fxLayout="column" class="third-bg">
+    <section fxLayout="column" fxLayoutGap="50px" class="full-width box-container primary-bg">
+        <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="center center">
+            <h1 class="third-color title">Odontologia</h1>
+            <i class="fas fa-3x fa-tooth third-color title-icon"></i>
+        </div>
+        <p fxLayoutAlign="center center" class="third-color">
+            Agende já com um dos nossos dentistas (11) 99999-9999
+        </p>
+    </section>
+    <section class="box-container">
+        <h2>Como funciona?</h2>
+        <mat-divider></mat-divider>
+        <div class="box-container">
+            <mat-horizontal-stepper fxHide.xs class="border-shadow" labelPosition="bottom">
+                <mat-step>
+                    <ng-template matStepLabel>Procedimento</ng-template>
+                    <div fxLayout="column" fxLayoutAlign="center center">
+                        <h3 class="primary-color">Algum texto sobre odontologia</h3>
+                        <p class="text-muted">
+                            Trabalhamos com os melhores dentistas, e temos um atendimento diferenciado.<br />
+                            Trabalhamos com os melhores dentistas, e temos um atendimento diferenciado.<br />
+                            Trabalhamos com os melhores dentistas, e temos um atendimento diferenciado.<br />
+                            Trabalhamos com os melhores dentistas, e temos um atendimento diferenciado.<br />
+                            Trabalhamos com os melhores dentistas, e temos um atendimento diferenciado.
+                        </p>
+                    </div>
+                    <div fxLayoutAlign="end">
+                        <button mat-raised-button matStepperNext color="accent">Serviços ></button>
+                    </div>
+                </mat-step>
+                <mat-step>
+                    <ng-template matStepLabel>Serviços</ng-template>
+                    <div fxLayout="column" fxLayoutAlign="center center">
+                        <h3 class="primary-color">O que oferecemos aos nossos pacientes</h3>
+                        <p class="text-muted">
+                            -Descrição do Serviço 1 <br />
+                            -Descrição do Serviço 2 <br />
+                            -Descrição do Serviço 3 <br />
+                            -Descrição do Serviço 4 <br />
+                            -Descrição do Serviço 5
+                        </p>
+                    </div>
+                    <div fxLayoutAlign="end" fxLayoutGap="15px">
+                        <button mat-raised-button matStepperNext color="accent">Agendamento ></button>
+                    </div>
+                </mat-step>
+                <mat-step>
+                    <ng-template matStepLabel>Agendamento</ng-template>
+                    <div fxLayout="column" fxLayoutAlign="center center">
+                        <h3 class="primary-color">Se interessou?</h3>
+                        <p class="text-muted">
+                            Você pode realizar o agendamento diretamente pelo telefone <strong>(11)
+                                99999-9999</strong><br />
+                            ou se preferir pode utilizar o <strong>WhatApp.</strong>
+                        </p>
+                    </div>
+                    <div fxLayoutAlign="end" fxLayoutGap="15px">
+                        <a target="_blank"
+                            href="https://api.whatsapp.com/send?phone=5511956780566&text=Olá%20Medcenter%20guaianases%20gostaria%20de%20agendar%20uma%20consulta%20odontológica."
+                            mat-raised-button matStepperNext color="accent">
+                            Agende pelo WhatsApp
+                        </a>
+                    </div>
+                </mat-step>
+            </mat-horizontal-stepper>
+            <mat-vertical-stepper fxHide.gt-xs class="border-shadow" labelPosition="bottom">
+                <mat-step>
+                    <ng-template matStepLabel>Procedimento</ng-template>
+                    <div fxLayout="column" fxLayoutAlign="center center">
+                        <h3 class="primary-color">Algum texto sobre odontologia</h3>
+                        <p class="text-muted">
+                            Trabalhamos com os melhores dentistas, e temos um atendimento diferenciado.<br />
+                            Trabalhamos com os melhores dentistas, e temos um atendimento diferenciado.<br />
+                            Trabalhamos com os melhores dentistas, e temos um atendimento diferenciado.<br />
+                            Trabalhamos com os melhores dentistas, e temos um atendimento diferenciado.<br />
+                            Trabalhamos com os melhores dentistas, e temos um atendimento diferenciado.
+                        </p>
+                    </div>
+                    <div fxLayoutAlign="end">
+                        <button mat-raised-button matStepperNext color="accent">Serviços ></button>
+                    </div>
+                </mat-step>
+                <mat-step>
+                    <ng-template matStepLabel>Serviços</ng-template>
+                    <div fxLayout="column" fxLayoutAlign="center center">
+                        <h3 class="primary-color">O que oferecemos aos nossos pacientes</h3>
+                        <p class="text-muted">
+                            -Descrição do Serviço 1 <br />
+                            -Descrição do Serviço 2 <br />
+                            -Descrição do Serviço 3 <br />
+                            -Descrição do Serviço 4 <br />
+                            -Descrição do Serviço 5
+                        </p>
+                    </div>
+                    <div fxLayoutAlign="end" fxLayoutGap="15px">
+                        <button mat-raised-button matStepperNext color="accent">Agendamento ></button>
+                    </div>
+                </mat-step>
+                <mat-step>
+                    <ng-template matStepLabel>Agendamento</ng-template>
+                    <div fxLayout="column" fxLayoutAlign="center center">
+                        <h3 class="primary-color">Se interessou?</h3>
+                        <p class="text-muted">
+                            Você pode realizar o agendamento diretamente pelo telefone <strong>(11)
+                                99999-9999</strong><br/>
+                            ou se preferir pode utilizar o <strong>WhatApp.</strong>
+                        </p>
+                    </div>
+                    <div fxLayoutAlign="end" fxLayoutGap="15px">
+                        <a target="_blank"
+                            href="https://api.whatsapp.com/send?phone=5511956780566&text=Olá%20Medcenter%20guaianases%20gostaria%20de%20agendar%20uma%20consulta%20odontológica."
+                            mat-raised-button matStepperNext color="accent">
+                            Agende WhatsApp
+                        </a>
+                    </div>
+                </mat-step>
+            </mat-vertical-stepper>
+        </div>
+    </section>
+</div>

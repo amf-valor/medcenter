@@ -20,6 +20,7 @@ import {
   MatProgressSpinnerModule, 
   MatSidenavModule,
   MatListModule,
+  MatStepperModule,
   MatDividerModule} from '@angular/material';
 
 @NgModule({
@@ -44,6 +45,7 @@ import {
     MatProgressBarModule,
     MatProgressSpinnerModule,
     MatListModule,
+    MatStepperModule,
     MatDividerModule,
     ReactiveFormsModule,
   ],
@@ -67,6 +69,7 @@ import {
     MatProgressBarModule,
     MatProgressSpinnerModule,
     MatListModule,
+    MatStepperModule,
     MatDividerModule,
     ReactiveFormsModule,
   ]
