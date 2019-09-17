@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1568668657454,
+  "timestamp": 1568741058113,
   "index": "/medcenter/index.html",
   "assetGroups": [
     {
@@ -8,7 +8,6 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/medcenter/favicon.ico",
         "/medcenter/index.html",
         "/medcenter/main-es2015.2cd6cd221b8d50ea18ae.js",
         "/medcenter/main-es5.91ce4389313d9ff68292.js",
@@ -45,6 +44,7 @@
         "/medcenter/assets/images/medcenter-clinica800x534.png",
         "/medcenter/assets/images/review-idosa400x260.png",
         "/medcenter/banner-home1920.cb32546524d1fd50a41b.webp",
+        "/medcenter/icon192x192.png",
         "/medcenter/medcenter-clinica1024.1cade656439a69a7f01d.webp",
         "/medcenter/review-idosa400x260.26d27794a56fb16a6934.png"
       ],
@@ -73,8 +73,8 @@
     "/medcenter/assets/images/medcenter-clinica800x534.png": "6cd3e026215bd3b8953b9a293c51a342be9b214d",
     "/medcenter/assets/images/review-idosa400x260.png": "7346997e224fe6461e19b20aadd9de1db53f9db0",
     "/medcenter/banner-home1920.cb32546524d1fd50a41b.webp": "23b02dedc86d9b6e864560835d569940c304978c",
-    "/medcenter/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/medcenter/index.html": "6a6cab0df67634f022e8c344db77b2403784850f",
+    "/medcenter/icon192x192.png": "ff1cc2b15baae1fa18057880082fbf49bdf7710b",
+    "/medcenter/index.html": "f2723a98b8bfdb84e11cb4d6befe1f3627d325bf",
     "/medcenter/main-es2015.2cd6cd221b8d50ea18ae.js": "719c817035541141c2b222b9d5325f14ba0585f1",
     "/medcenter/main-es5.91ce4389313d9ff68292.js": "a500c5eee6d16f18a6920abae804ae17f47b3611",
     "/medcenter/medcenter-clinica1024.1cade656439a69a7f01d.webp": "f6e5a43221825c62e1c0f2862361e119917a01ee",
