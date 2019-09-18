@@ -11,6 +11,7 @@ import { ExamesComponent } from './exames/exames.component';
 import { MedcenterComponent } from './medcenter/medcenter.component';
 import { ContatoComponent } from './contato/contato.component';
 import { OdontologiaComponent } from './odontologia/odontologia.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { OdontologiaComponent } from './odontologia/odontologia.component';
     SharedModule,
     CoreModule,
     AppRoutingModule,
+    HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],

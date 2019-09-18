@@ -1,28 +1,47 @@
-<div fxLayout="row" fxLayout.xs="column" fxLayoutGap="15px" class="box-container light-bg">
+<div fxLayout="row" fxLayout.xs="column" fxLayoutGap="15px" class="box-container light-bg">      
     <div fxLayout="column" fxFlex="60" fxLayoutGap="30px">
         <div>
             <h2>Contato</h2>
             <mat-divider></mat-divider>
         </div>
         <p class="text-muted">Possui alguma dúvida, sugestão ou crítica por favor nos deixe uma mensagem.</p>
-        <form fxLayout="column" fxLayoutGap="15px">
+        <form fxLayout="column" fxLayoutGap="15px" [formGroup]="contactForm">
             <mat-form-field appearance="outline">
                 <mat-label>Qual seu nome?</mat-label>
-                <input matInput>
+                <input matInput formControlName="nome">
+                <mat-error *ngIf="hasError('nome')">
+                    seu nome é obrigatório
+                </mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Qual seu melhor e-mail de contato?</mat-label>
-                <input matInput>
+                <input matInput formControlName="email">
+                <mat-error *ngIf="hasError('email')">
+                    esse e-mail não é valido
+                </mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
-                <mat-label>Qual seu telefone celular?</mat-label>
-                <input matInput>
+                <mat-label>Qual seu telefone? somente numeros com DDD ex:11999999999</mat-label>
+                <input matInput formControlName="phone">
+                <mat-error *ngIf="hasError('phone')">
+                    telefone só aceita numeros e com o DDD ex: 11986254107
+                </mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Deixe sua mensagem</mat-label>
-                <textarea matInput rows="5"></textarea>
+                <textarea matInput rows="5" formControlName="message"></textarea>
+                <mat-error *ngIf="hasError('message')">
+                    não esqueça de inserir sua mensagem de contato!
+                </mat-error>
             </mat-form-field>
-            <button mat-raised-button color="primary">Enviar Mensagem</button>
+            <button 
+            mat-raised-button 
+            color="primary" 
+            (click)="onSendMessageButtonClick()"
+            [disabled]="!contactForm.valid">
+                Enviar Mensagem
+            </button>
+            <mat-progress-bar *ngIf="isProgressVisible" mode="indeterminate"></mat-progress-bar>
         </form>
     </div>
     <div fxLayoutAlign="center center" fxFlex="40">
