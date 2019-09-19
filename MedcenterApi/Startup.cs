@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using AutoMapper;
+using MedcenterApi.Controllers.Model;
 using MedcenterApi.Data;
 using MedcenterApi.Data.Model;
 using MedcenterApi.Services;
 using MedcenterApi.Services.Contract;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace MedcenterApi
 {
@@ -34,7 +29,14 @@ namespace MedcenterApi
             var connectionString = Configuration["ConnectionStrings:Medcenter"];
             services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
             services.AddSingleton<IEmailSender, EmailSender>();
+            services.AddTransient<IServiceService, ServiceService>();
             services.AddDbContext<MedcenterDbContext>(options => options.UseMySql(connectionString));
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<ServiceEntity, ServiceDTO>();
+            });
+
+            services.AddSingleton(config.CreateMapper());
 
             services.AddCors(options =>
             {

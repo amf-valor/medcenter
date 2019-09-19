@@ -20,7 +20,7 @@ namespace MedcenterApi.Services
             _emailSettings = emailSettings.Value;
         }
 
-        public void SendEmail(Contact contact)
+        public void SendEmail(ContactDTO contact)
         {
             try
             {

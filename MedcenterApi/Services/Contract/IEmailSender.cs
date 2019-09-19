@@ -5,6 +5,6 @@ namespace MedcenterApi.Services.Contract
 {
     public interface IEmailSender
     {
-        void SendEmail(Contact contact);
+        void SendEmail(ContactDTO contact);
     }
 }

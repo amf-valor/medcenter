@@ -1,4 +1,6 @@
-﻿namespace MedcenterApi.Data.Model
+﻿using System;
+
+namespace MedcenterApi.Data.Model
 {
     public class ServiceEntity
     {
@@ -7,5 +9,6 @@
         public decimal Price { get; set; }
         public bool IsSchedulable{ get; set; }
         public ServiceType Type { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }

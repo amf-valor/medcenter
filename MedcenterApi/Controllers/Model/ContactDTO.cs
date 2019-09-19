@@ -1,6 +1,6 @@
 ﻿namespace MedcenterApi.Controllers.Model
 {
-    public class Contact
+    public class ContactDTO
     {
         public string From { get; set; }
         public string Email { get; set; }
