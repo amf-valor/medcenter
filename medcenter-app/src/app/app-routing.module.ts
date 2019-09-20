@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { EspecialidadesComponent } from './especialidades/especialidades.component';
@@ -6,6 +6,8 @@ import { ExamesComponent } from './exames/exames.component';
 import { MedcenterComponent } from './medcenter/medcenter.component';
 import { ContatoComponent } from './contato/contato.component';
 import { OdontologiaComponent } from './odontologia/odontologia.component';
+import { registerLocaleData } from '@angular/common';
+import pt from '@angular/common/locales/pt';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -16,8 +18,10 @@ const routes: Routes = [
   {path:'contato', component: ContatoComponent}
 ];
 
+registerLocaleData(pt);
 @NgModule({
   imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [{provide: LOCALE_ID, useValue: 'pt'}]
 })
 export class AppRoutingModule { }

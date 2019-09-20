@@ -1,4 +1,4 @@
-export class Contato{
+export interface Contato{
     from: string;
     email: string;
     phone:string;

@@ -15,25 +15,30 @@
                 <p>
         </div>
     </div>
-    <div fxLayout="column" fxLayoutGap="15px" class="box-container">
-        <mat-card class="mat-card-elevation">
+    <mat-progress-bar *ngIf="isProgressVisible" mode="indeterminate"></mat-progress-bar>
+    <div 
+    fxLayout="column" 
+    fxLayoutGap="15px" 
+    class="box-container"
+    *ngIf="!isProgressVisible">
+        <mat-card class="mat-card-elevation" *ngFor="let especialidade of especialidades">
             <mat-card-content fxLayout="row" fxLayout.xs="column" fxLayoutGap.xs="15px">
                 <span fxLayoutAlign="center center" class="text-muted">
-                    <strong>ACUPUNTURA</strong>
+                    <strong>{{especialidade.name}}</strong>
                 </span>
-            </mat-card-content>
-        </mat-card>
-        <mat-card class="mat-card-elevation">
-            <mat-card-content fxLayout="row" fxLayout.xs="column" fxLayoutGap.xs="15px">
-                <span fxLayoutAlign="center center" class="text-muted">
-                    <strong>ALERGIA E IMUNOLOGIA</strong>
-                </span>
-                <div fxLayout="row" fxLayout.xs="column" fxLayoutGap.gt-xs="30px" fxLayoutGap.xs="15px"
-                    fxLayoutAlign="end end" fxLayoutAlign.xs="center center" class="price full-width">
-                    <span class="price">
-                        R$ 90,00
+                <div 
+                fxLayout="row" 
+                fxLayout.xs="column" 
+                fxLayoutGap.gt-xs="30px" 
+                fxLayoutGap.xs="15px"
+                fxLayoutAlign="end end" 
+                fxLayoutAlign.xs="center center" 
+                class="price full-width">
+                    <span class="price" *ngIf="especialidade.price > 0">
+                        {{especialidade.price | currency:'BRL'}}
                     </span>
                     <a
+                    *ngIf="especialidade.isSchedulable"
                     target="_blank" 
                     href="https://clinicatotal.com.br/v2/online/?codigo_site=68QCNZ8T9E" 
                     mat-raised-button color="accent">
@@ -42,133 +47,25 @@
                 </div>
             </mat-card-content>
         </mat-card>
-        <mat-card class="mat-card-elevation">
-            <mat-card-content fxLayout="row" fxLayout.xs="column" fxLayoutGap.xs="15px">
-                <span fxLayoutAlign="center center" class="text-muted">
-                    <strong>PEDIATRA</strong>
-                </span>
-            </mat-card-content>
-        </mat-card>
-        <mat-card class="mat-card-elevation">
-            <mat-card-content fxLayout="row" fxLayout.xs="column" fxLayoutGap.xs="15px">
-                <span fxLayoutAlign="center center" class="text-muted">
-                    <strong>CARDIOLOGIA</strong>
-                </span>
-                <div fxLayout="row" fxLayout.xs="column" fxLayoutGap.gt-xs="30px" fxLayoutGap.xs="15px"
-                    fxLayoutAlign="end end" fxLayoutAlign.xs="center center" class="price full-width">
-                    <span class="price">
-                        R$ 90,00
-                    </span>
-                    <a
-                    target="_blank" 
-                    href="https://clinicatotal.com.br/v2/online/?codigo_site=68QCNZ8T9E" 
-                    mat-raised-button color="accent">
-                        Agende já
-                    </a>
-                </div>
-            </mat-card-content>
-        </mat-card>
-        <mat-card class="mat-card-elevation">
-            <mat-card-content fxLayout="row" fxLayout.xs="column" fxLayoutGap.xs="15px">
-                <span fxLayoutAlign="center center" class="text-muted">
-                    <strong>CIGURGIAO</strong>
-                </span>
-            </mat-card-content>
-        </mat-card>
-        <mat-card class="mat-card-elevation">
-            <mat-card-content fxLayout="row" fxLayout.xs="column" fxLayoutGap.xs="15px">
-                <span fxLayoutAlign="center center" class="text-muted">
-                    <strong>ORTOPEDISTA</strong>
-                </span>
-                <div fxLayout="row" fxLayout.xs="column" fxLayoutGap.gt-xs="30px" fxLayoutGap.xs="15px"
-                    fxLayoutAlign="end end" fxLayoutAlign.xs="center center" class="price full-width">
-                    <span class="price">
-                        R$ 90,00
-                    </span>
-                    <a
-                    target="_blank" 
-                    href="https://clinicatotal.com.br/v2/online/?codigo_site=68QCNZ8T9E" 
-                    mat-raised-button color="accent">
-                        Agende já
-                    </a>
-                </div>
-            </mat-card-content>
-        </mat-card>
-        <mat-card class="mat-card-elevation">
-            <mat-card-content fxLayout="row" fxLayout.xs="column" fxLayoutGap.xs="15px">
-                <span fxLayoutAlign="center center" class="text-muted">
-                    <strong>VASCULAR</strong>
-                </span>
-                <div fxLayout="row" fxLayout.xs="column" fxLayoutGap.gt-xs="30px" fxLayoutGap.xs="15px"
-                    fxLayoutAlign="end end" fxLayoutAlign.xs="center center" class="price full-width">
-                    <span class="price">
-                        R$ 90,00
-                    </span>
-                    <a
-                    target="_blank" 
-                    href="https://clinicatotal.com.br/v2/online/?codigo_site=68QCNZ8T9E" 
-                    mat-raised-button color="accent">
-                        Agende já
-                    </a>
-                </div>
-            </mat-card-content>
-        </mat-card>
-        <mat-card class="mat-card-elevation">
-            <mat-card-content fxLayout="row" fxLayout.xs="column" fxLayoutGap.xs="15px">
-                <span fxLayoutAlign="center center" class="text-muted">
-                    <strong>ENDOCRINOLOGIA</strong>
-                </span>
-                <div fxLayout="row" fxLayout.xs="column" fxLayoutGap.gt-xs="30px" fxLayoutGap.xs="15px"
-                    fxLayoutAlign="end end" fxLayoutAlign.xs="center center" class="price full-width">
-                    <span class="price">
-                        R$ 90,00
-                    </span>
-                    <a
-                    target="_blank" 
-                    href="https://clinicatotal.com.br/v2/online/?codigo_site=68QCNZ8T9E" 
-                    mat-raised-button color="accent">
-                        Agende já
-                    </a>
-                </div>
-            </mat-card-content>
-        </mat-card>
-        <mat-card class="mat-card-elevation">
-            <mat-card-content fxLayout="row" fxLayout.xs="column" fxLayoutGap.xs="15px">
-                <span fxLayoutAlign="center center" class="text-muted">
-                    <strong>OBSTETRA</strong>
-                </span>
-                <div fxLayout="row" fxLayout.xs="column" fxLayoutGap.gt-xs="30px" fxLayoutGap.xs="15px"
-                    fxLayoutAlign="end end" fxLayoutAlign.xs="center center" class="price full-width">
-                    <span class="price">
-                        R$ 90,00
-                    </span>
-                    <a
-                    target="_blank" 
-                    href="https://clinicatotal.com.br/v2/online/?codigo_site=68QCNZ8T9E" 
-                    mat-raised-button color="accent">
-                        Agende já
-                    </a>
-                </div>
-            </mat-card-content>
-        </mat-card>
-        <mat-card class="mat-card-elevation">
-            <mat-card-content fxLayout="row" fxLayout.xs="column" fxLayoutGap.xs="15px">
-                <span fxLayoutAlign="center center" class="text-muted">
-                    <strong>FONOAUDIOLOGIA</strong>
-                </span>
-                <div fxLayout="row" fxLayout.xs="column" fxLayoutGap.gt-xs="30px" fxLayoutGap.xs="15px"
-                    fxLayoutAlign="end end" fxLayoutAlign.xs="center center" class="price full-width">
-                    <span class="price">
-                        R$ 90,00
-                    </span>
-                    <a
-                    target="_blank" 
-                    href="https://clinicatotal.com.br/v2/online/?codigo_site=68QCNZ8T9E" 
-                    mat-raised-button color="accent">
-                        Agende já
-                    </a>
-                </div>
-            </mat-card-content>
-        </mat-card>
+        <div 
+        fxLayout="row"
+        fxLayoutAlign="center center"
+        fxLayoutGap="15px" 
+        *ngIf="hasPages">
+            <button 
+            mat-raised-button 
+            color="accent" 
+            *ngIf="hasPreviousPages"
+            (click)="onPreviousButtonClick()">
+                anterior
+            </button> 
+            <button 
+            mat-raised-button 
+            color="accent"
+            *ngIf="hasNextPages"
+            (click)="onNextButtonClick()">
+                proxima >
+            </button>   
+        </div>
     </div>
 </section>
