@@ -8,6 +8,7 @@ namespace MedcenterApi.Data
     public class MedcenterDbContext : DbContext
     {
         public DbSet<ServiceEntity> Services { get; set;}
+        public DbSet<UserEntity> Users { get; set; }
         public MedcenterDbContext() { }
         public MedcenterDbContext(DbContextOptions<MedcenterDbContext> options) : base(options) { }
         protected override void OnModelCreating(ModelBuilder builder)
@@ -41,6 +42,15 @@ namespace MedcenterApi.Data
                 .Property(t => t.CreatedAt)
                 .HasColumnType("timestamp")
                 .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+            UserEntity admin = new UserEntity()
+            {
+                Id = 1,
+                Login = "admin.medcenter",
+                Password = "Medcenter@dmin"
+            };
+
+            builder.Entity<UserEntity>().HasData(admin);
         }
     }
 }

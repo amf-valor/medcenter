@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MedcenterApi.Migrations
 {
     [DbContext(typeof(MedcenterDbContext))]
-    [Migration("20190919181718_v1")]
+    [Migration("20190923191208_v1")]
     partial class v1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -312,6 +312,28 @@ namespace MedcenterApi.Migrations
                             Name = "acupuntura",
                             Price = 90.00m,
                             Type = "Specialty"
+                        });
+                });
+
+            modelBuilder.Entity("MedcenterApi.Data.Model.UserEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Login");
+
+                    b.Property<string>("Password");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Login = "admin.medcenter",
+                            Password = "Medcenter@dmin"
                         });
                 });
 #pragma warning restore 612, 618

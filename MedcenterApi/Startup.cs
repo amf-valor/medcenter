@@ -30,6 +30,7 @@ namespace MedcenterApi
             services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
             services.AddSingleton<IEmailSender, EmailSender>();
             services.AddTransient<IServiceService, ServiceService>();
+            services.AddTransient<IUserService, UserService>();
             services.AddDbContext<MedcenterDbContext>(options => options.UseMySql(connectionString));
             var config = new MapperConfiguration(cfg =>
             {

@@ -25,10 +25,29 @@ namespace MedcenterApi.Migrations
                     table.PrimaryKey("PK_Services", x => x.Id);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Users",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Login = table.Column<string>(nullable: true),
+                    Password = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Users", x => x.Id);
+                });
+
             migrationBuilder.InsertData(
                 table: "Services",
                 columns: new[] { "Id", "IsSchedulable", "Name", "Price", "Type" },
                 values: new object[] { 1, true, "acupuntura", 90.00m, "Specialty" });
+
+            migrationBuilder.InsertData(
+                table: "Services",
+                columns: new[] { "Id", "IsSchedulable", "Name", "Price", "Type" },
+                values: new object[] { 29, true, "acupuntura", 90.00m, "Specialty" });
 
             migrationBuilder.InsertData(
                 table: "Services",
@@ -93,12 +112,12 @@ namespace MedcenterApi.Migrations
             migrationBuilder.InsertData(
                 table: "Services",
                 columns: new[] { "Id", "IsSchedulable", "Name", "Price", "Type" },
-                values: new object[] { 16, true, "acupuntura", 90.00m, "Specialty" });
+                values: new object[] { 30, true, "acupuntura", 90.00m, "Specialty" });
 
             migrationBuilder.InsertData(
                 table: "Services",
                 columns: new[] { "Id", "IsSchedulable", "Name", "Price", "Type" },
-                values: new object[] { 15, true, "acupuntura", 90.00m, "Specialty" });
+                values: new object[] { 16, true, "acupuntura", 90.00m, "Specialty" });
 
             migrationBuilder.InsertData(
                 table: "Services",
@@ -168,18 +187,21 @@ namespace MedcenterApi.Migrations
             migrationBuilder.InsertData(
                 table: "Services",
                 columns: new[] { "Id", "IsSchedulable", "Name", "Price", "Type" },
-                values: new object[] { 29, true, "acupuntura", 90.00m, "Specialty" });
+                values: new object[] { 15, true, "acupuntura", 90.00m, "Specialty" });
 
             migrationBuilder.InsertData(
-                table: "Services",
-                columns: new[] { "Id", "IsSchedulable", "Name", "Price", "Type" },
-                values: new object[] { 30, true, "acupuntura", 90.00m, "Specialty" });
+                table: "Users",
+                columns: new[] { "Id", "Login", "Password" },
+                values: new object[] { 1, "admin.medcenter", "Medcenter@dmin" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
                 name: "Services");
+
+            migrationBuilder.DropTable(
+                name: "Users");
         }
     }
 }

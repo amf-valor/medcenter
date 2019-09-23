@@ -312,6 +312,28 @@ namespace MedcenterApi.Migrations
                             Type = "Specialty"
                         });
                 });
+
+            modelBuilder.Entity("MedcenterApi.Data.Model.UserEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Login");
+
+                    b.Property<string>("Password");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Login = "admin.medcenter",
+                            Password = "Medcenter@dmin"
+                        });
+                });
 #pragma warning restore 612, 618
         }
     }
