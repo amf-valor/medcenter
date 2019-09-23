@@ -5,13 +5,13 @@ import { Contato } from '../contato/contato.model';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { PagedResponse } from '../_core/paged-response';
-import { Especialidade } from '../especialidades/especialidade.model';
+import { ServicoResponse } from '../servicos/servico.response';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MedcenterApiService {
-
+  
   constructor(private httpClient:HttpClient) { }
 
   postContact(contato:Contato): Observable<void>{
@@ -23,10 +23,17 @@ export class MedcenterApiService {
       .pipe(map(() => {return Observable.create()}))    
   }
 
-  getSpecialties(page: number): Observable<PagedResponse<Especialidade>>{
+  getServices(page: number, type:string): Observable<PagedResponse<ServicoResponse>>{
     const httpHeaders = { 'Content-Type': 'application/json'}
-    return this.httpClient.get<PagedResponse<Especialidade>>(
-      `${environment.MEDCENTER_API_ADDRESS}/specialty?page=${page}`,
+    return this.httpClient.get<PagedResponse<ServicoResponse>>(
+      `${environment.MEDCENTER_API_ADDRESS}/services?page=${page}&type=${type}`,
+       {headers: httpHeaders})
+  }
+
+  getServicesByName(page: number, type:string, name:string): Observable<PagedResponse<ServicoResponse>>{
+    const httpHeaders = { 'Content-Type': 'application/json'}
+    return this.httpClient.get<PagedResponse<ServicoResponse>>(
+      `${environment.MEDCENTER_API_ADDRESS}/services?page=${page}&type=${type}&name=${name}`,
        {headers: httpHeaders})
   }
 }

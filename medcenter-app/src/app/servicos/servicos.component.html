@@ -1,0 +1,75 @@
+<section fxLayout="column" class="third-bg">
+        <div fxLayout="column" fxLayoutGap="50px" class="full-width box-container primary-bg">
+            <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="center center">
+                <h1 class="third-color title">{{model.title}}</h1>
+                <i class="{{model.icon}} third-color title-icon"></i>
+            </div>
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>{{model.searchLabel}}</mat-label>
+                    <input 
+                    #searchInput
+                    [(ngModel)]='searchValue'  
+                    matInput 
+                    (ngModelChange)="onSearchInputChange($event)">
+                        <mat-icon style="font-size: 2em;" matSuffix>search</mat-icon>
+                </mat-form-field>
+                <p class="third-color" fxLayoutAlign="center center">
+                    Caso prefira, telefone já: (11) 99999-9999
+                    <p>
+            </div>
+        </div>
+        <mat-progress-bar *ngIf="isProgressVisible" mode="indeterminate"></mat-progress-bar>
+        <div 
+        fxLayout="column" 
+        fxLayoutGap="15px" 
+        class="box-container"
+        *ngIf="!isProgressVisible">
+            <mat-card class="mat-card-elevation" *ngFor="let service of services">
+                <mat-card-content fxLayout="row" fxLayout.xs="column" fxLayoutGap.xs="15px">
+                    <span fxLayoutAlign="center center" class="text-muted">
+                        <strong>{{service.name}}</strong>
+                    </span>
+                    <div 
+                    fxLayout="row" 
+                    fxLayout.xs="column" 
+                    fxLayoutGap.gt-xs="30px" 
+                    fxLayoutGap.xs="15px"
+                    fxLayoutAlign="end end" 
+                    fxLayoutAlign.xs="center center" 
+                    class="price full-width">
+                        <span class="price" *ngIf="service.price > 0">
+                            {{service.price | currency:'BRL'}}
+                        </span>
+                        <a
+                        *ngIf="service.isSchedulable"
+                        target="_blank" 
+                        href="https://clinicatotal.com.br/v2/online/?codigo_site=68QCNZ8T9E" 
+                        mat-raised-button color="accent">
+                            Agende já
+                        </a>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+            <div 
+            fxLayout="row"
+            fxLayoutAlign="center center"
+            fxLayoutGap="15px" 
+            *ngIf="hasPages">
+                <button 
+                mat-raised-button 
+                color="accent" 
+                *ngIf="hasPreviousPages"
+                (click)="onPreviousButtonClick()">
+                    anterior
+                </button> 
+                <button 
+                mat-raised-button 
+                color="accent"
+                *ngIf="hasNextPages"
+                (click)="onNextButtonClick()">
+                    proxima >
+                </button>   
+            </div>
+        </div>
+    </section>

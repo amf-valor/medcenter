@@ -13,7 +13,7 @@ namespace MedcenterApi.Helpers
             var result = new PagedResult<V>
             {
                 CurrentPage = page,
-                NextPage = (query.Count() / pageSize) == page ? 0 : (page + 1),
+                NextPage = (query.Count() <= pageSize) || ((page * pageSize) == query.Count()) ? 0 : (page + 1),
                 PreviousPage = page - 1
             };
             

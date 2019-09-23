@@ -18,11 +18,20 @@ namespace MedcenterApi.Services
             _mapper = mapper;
         }
 
-        public PagedResult<ServiceDTO> GetSpecialties(int page)
+        public PagedResult<ServiceDTO> GetByName(int page, ServiceType type, string name)
         {
             return _context.Services
-                .Where(s => s.Type == ServiceType.Specialty)
+               .Where(s => s.Type == type && s.Name.StartsWith(name))
+               .GetPaged<ServiceEntity, ServiceDTO>(page, 10, _mapper);
+        }
+
+        public PagedResult<ServiceDTO> GetByType(int page, ServiceType type)
+        {
+            return _context.Services
+                .Where(s => s.Type == type)
                 .GetPaged<ServiceEntity, ServiceDTO>(page, 10, _mapper);
         }
+
+        
     }
 }

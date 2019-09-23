@@ -1,6 +1,6 @@
 import { MatSnackBar } from '@angular/material';
 
-export class BaseComponent{
+export abstract class BaseComponent{
     
     private _isProgressVisible: boolean;
     

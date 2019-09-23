@@ -42,7 +42,7 @@ namespace MedcenterApi
             {
                 options.AddPolicy(corsPolicyName, builder =>
                 {
-                    builder.WithOrigins("http://localhost:4200")
+                    builder.AllowAnyOrigin()
                            .AllowAnyHeader()
                            .AllowAnyMethod();
                 });
@@ -65,7 +65,7 @@ namespace MedcenterApi
             }
 
             app.UseCors(corsPolicyName);
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseMvc();
         }
     }

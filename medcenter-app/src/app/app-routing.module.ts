@@ -1,8 +1,8 @@
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { EspecialidadesComponent } from './especialidades/especialidades.component';
-import { ExamesComponent } from './exames/exames.component';
+import { EspecialidadesComponent } from './servicos/especialidades.component';
+import { ExamesComponent } from './servicos/exames.component';
 import { MedcenterComponent } from './medcenter/medcenter.component';
 import { ContatoComponent } from './contato/contato.component';
 import { OdontologiaComponent } from './odontologia/odontologia.component';
