@@ -4,7 +4,7 @@ import { MatSnackBar } from '@angular/material';
 import { AdminService } from 'src/app/_services/admin.service';
 
 @Component({
-  selector: 'app-settings',
+  selector: 'md-admin-settings',
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.css']
 })

@@ -9,28 +9,11 @@ namespace MedcenterApi.Data
     {
         public DbSet<ServiceEntity> Services { get; set;}
         public DbSet<UserEntity> Users { get; set; }
+        public DbSet<MedcenterAppSetting> MedcenterAppSettings { get; set; }
         public MedcenterDbContext() { }
         public MedcenterDbContext(DbContextOptions<MedcenterDbContext> options) : base(options) { }
         protected override void OnModelCreating(ModelBuilder builder)
-        {
-
-            List<ServiceEntity> data = new List<ServiceEntity>();
-
-            for (int i = 1; i < 31; i++)
-            {
-                ServiceEntity service = new ServiceEntity()
-                {
-                    Id = i,
-                    Name = "acupuntura",
-                    IsSchedulable = true,
-                    Price = 90.00m,
-                    Type = ServiceType.Specialty
-                };
-
-                data.Add(service);
-            }
-
-            builder.Entity<ServiceEntity>().HasData(data);
+        {          
             var converter = new EnumToStringConverter<ServiceType>();
 
             builder
@@ -51,6 +34,17 @@ namespace MedcenterApi.Data
             };
 
             builder.Entity<UserEntity>().HasData(admin);
+
+            List<MedcenterAppSetting> settings = new List<MedcenterAppSetting>();
+            settings.Add(new MedcenterAppSetting() { Name = "WhatsApp", Value = "" });
+            settings.Add(new MedcenterAppSetting() { Name = "Phone", Value = "" });
+            settings.Add(new MedcenterAppSetting() { Name = "Address", Value = "" });
+            settings.Add(new MedcenterAppSetting() { Name = "CNPJ", Value = "" });
+            settings.Add(new MedcenterAppSetting() { Name = "CompanyName", Value = "" });
+            settings.Add(new MedcenterAppSetting() { Name = "TechinicalManager", Value = "" });
+
+            builder.Entity<MedcenterAppSetting>().HasData(settings);
+
         }
     }
 }

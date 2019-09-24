@@ -31,10 +31,12 @@ namespace MedcenterApi
             services.AddSingleton<IEmailSender, EmailSender>();
             services.AddTransient<IServiceService, ServiceService>();
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IMedcenterAppSettingsService, MedcenterAppSettingsService>();
             services.AddDbContext<MedcenterDbContext>(options => options.UseMySql(connectionString));
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<ServiceEntity, ServiceDTO>();
+                cfg.CreateMap<MedcenterAppSetting, SettingDTO>();
             });
 
             services.AddSingleton(config.CreateMapper());
