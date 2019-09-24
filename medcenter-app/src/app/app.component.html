@@ -1,4 +1,4 @@
-<mat-sidenav-container>
+<mat-sidenav-container *ngIf="!isAdminComponent">
     <mat-sidenav #sidenav role="navigation">
         <md-sidenav-items (sidenavClose)="sidenav.close()"></md-sidenav-items>
     </mat-sidenav>
@@ -11,3 +11,8 @@
         <md-zap-button></md-zap-button>
     </mat-sidenav-content>
 </mat-sidenav-container>
+<div *ngIf="isAdminComponent">
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+</div>

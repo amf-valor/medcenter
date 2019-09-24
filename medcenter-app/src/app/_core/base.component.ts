@@ -1,10 +1,16 @@
 import { MatSnackBar } from '@angular/material';
+import { AdminService } from '../_services/admin.service';
 
 export abstract class BaseComponent{
     
     private _isProgressVisible: boolean;
+    isAdminComponent: boolean;
     
-    constructor(protected snackBar: MatSnackBar){}
+    constructor(protected snackBar: MatSnackBar, protected adminService:AdminService){
+        adminService.adminComponent.subscribe(
+            value => { this.isAdminComponent = value}
+        ); 
+    }
 
     get isProgressVisible(): boolean{
         return this._isProgressVisible

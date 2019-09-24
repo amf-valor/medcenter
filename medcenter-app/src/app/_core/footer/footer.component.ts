@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { BaseComponent } from '../base.component';
+import { MatSnackBar } from '@angular/material';
+import { AdminService } from 'src/app/_services/admin.service';
 
 @Component({
   selector: 'md-footer',

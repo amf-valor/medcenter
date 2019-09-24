@@ -6,12 +6,13 @@ import { MatSnackBar } from '@angular/material';
 import { finalize } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { ServicoModel } from './servico.model';
+import { AdminService } from '../_services/admin.service';
 
 @Component({
   selector: 'md-servicos',
   templateUrl: './servicos.component.html',
   styleUrls: ['./servicos.component.css'],
-  // encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None
 })
 export abstract class ServicosComponent extends BaseComponent implements OnInit{
   
@@ -37,8 +38,9 @@ export abstract class ServicosComponent extends BaseComponent implements OnInit{
   constructor(
     private medcenterApiService: MedcenterApiService,
     snackBar: MatSnackBar,
-    model: ServicoModel) { 
-      super(snackBar);
+    model: ServicoModel,
+    adminService: AdminService) { 
+      super(snackBar, adminService);
       this.model = model;
   }
 

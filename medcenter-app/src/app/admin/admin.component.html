@@ -1,0 +1,35 @@
+<div class="box-container" fxLayoutAlign="center center">
+    <mat-card fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px">
+        <img style="width: 50%" src="../../assets/icons/medcenter-icon96x48.png"/>
+        <form 
+        fxLayout="column" 
+        fxLayoutGap="15px" 
+        fxLayoutAlign="center center"
+        [formGroup]="loginForm">
+            <mat-form-field appearance="outline">
+                <mat-label>login</mat-label>
+                <input matInput formControlName="login" >
+                <mat-error *ngIf="hasError('login')">
+                    login é obrigatório
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>senha</mat-label>
+                <input matInput formControlName="password" type="password" >
+                <mat-error *ngIf="hasError('password')">
+                    senha é obrigatória
+                </mat-error>
+            </mat-form-field>
+        </form>
+        <mat-card-actions>
+            <button 
+            mat-raised-button 
+            color="primary"
+            (click)="onLoginButtonClick()"
+            [disabled]="!loginForm.valid">
+                Logar
+            </button>
+        </mat-card-actions>
+        <mat-progress-bar *ngIf="isProgressVisible" mode="indeterminate"></mat-progress-bar>
+    </mat-card>
+</div>

@@ -12,6 +12,8 @@ import { MedcenterComponent } from './medcenter/medcenter.component';
 import { ContatoComponent } from './contato/contato.component';
 import { OdontologiaComponent } from './odontologia/odontologia.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminComponent } from './admin/admin.component';
+import { SettingsComponent } from './admin/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { HttpClientModule } from '@angular/common/http';
     ExamesComponent,
     MedcenterComponent,
     ContatoComponent,
-    OdontologiaComponent
+    OdontologiaComponent,
+    AdminComponent,
+    SettingsComponent
   ],
   imports: [
     SharedModule,

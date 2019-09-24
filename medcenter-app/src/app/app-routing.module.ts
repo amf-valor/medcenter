@@ -8,6 +8,8 @@ import { ContatoComponent } from './contato/contato.component';
 import { OdontologiaComponent } from './odontologia/odontologia.component';
 import { registerLocaleData } from '@angular/common';
 import pt from '@angular/common/locales/pt';
+import { AdminComponent } from './admin/admin.component';
+import { SettingsComponent } from './admin/settings/settings.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -15,7 +17,9 @@ const routes: Routes = [
   {path:'exames', component: ExamesComponent},
   {path:'odontologia', component: OdontologiaComponent},
   {path:'medcenter', component: MedcenterComponent},
-  {path:'contato', component: ContatoComponent}
+  {path:'contato', component: ContatoComponent},
+  {path: 'admin', component: AdminComponent},
+  {path: 'admin/settings', component: SettingsComponent}
 ];
 
 registerLocaleData(pt);

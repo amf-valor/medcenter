@@ -3,6 +3,7 @@ import { ServicosComponent } from './servicos.component';
 import { MedcenterApiService } from '../_services/medcenter-api.service';
 import { MatSnackBar } from '@angular/material';
 import { ServicoModel } from './servico.model';
+import { AdminService } from '../_services/admin.service';
 
 @Component({
     selector: 'md-especialidades',
@@ -12,10 +13,15 @@ import { ServicoModel } from './servico.model';
   })
   
   export class EspecialidadesComponent extends ServicosComponent {
+    
+    get isAdminComponent(): boolean {
+        return false;
+    }
 
     constructor(
         medcenterApiService: MedcenterApiService,
-        snackBar: MatSnackBar) { 
+        snackBar: MatSnackBar,
+        adminService: AdminService) { 
         
             const model:ServicoModel = {
                 title: 'Especialidades',
@@ -24,6 +30,6 @@ import { ServicoModel } from './servico.model';
                 type:'specialty'
             }  
           
-            super(medcenterApiService, snackBar, model); 
+            super(medcenterApiService, snackBar, model, adminService); 
       }
   }

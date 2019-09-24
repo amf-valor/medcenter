@@ -3,6 +3,7 @@ import { ServicosComponent } from './servicos.component';
 import { MedcenterApiService } from '../_services/medcenter-api.service';
 import { MatSnackBar } from '@angular/material';
 import { ServicoModel } from './servico.model';
+import { AdminService } from '../_services/admin.service';
 
 @Component({
     selector: 'md-exames',
@@ -12,10 +13,11 @@ import { ServicoModel } from './servico.model';
   })
   
   export class ExamesComponent extends ServicosComponent {
-
+    
     constructor(
         medcenterApiService: MedcenterApiService,
-        snackBar: MatSnackBar) { 
+        snackBar: MatSnackBar,
+        adminService: AdminService) { 
         
             const model:ServicoModel = {
                 title: 'Exames',
@@ -24,6 +26,6 @@ import { ServicoModel } from './servico.model';
                 type:'exam'
             }  
           
-            super(medcenterApiService, snackBar, model); 
+            super(medcenterApiService, snackBar, model, adminService); 
       }
   }
