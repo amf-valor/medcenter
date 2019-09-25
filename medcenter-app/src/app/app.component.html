@@ -11,8 +11,14 @@
         <md-zap-button></md-zap-button>
     </mat-sidenav-content>
 </mat-sidenav-container>
-<div *ngIf="isAdminComponent">
-    <main>
-        <router-outlet></router-outlet>
-    </main>
-</div>
+<mat-sidenav-container *ngIf="isAdminComponent">
+    <mat-sidenav #sidenav role="navigation">
+        <md-sidenav-items-admin (sidenavClose)="sidenav.close()"></md-sidenav-items-admin>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <md-header-admin (sidenavToggle)="sidenav.toggle()"></md-header-admin>
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+    </mat-sidenav-content>
+</mat-sidenav-container>

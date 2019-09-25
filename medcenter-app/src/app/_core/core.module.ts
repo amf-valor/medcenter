@@ -5,13 +5,17 @@ import { RouterModule } from '@angular/router';
 import { SidenavItemsComponent } from './sidenav-items/sidenav-items.component';
 import { FooterComponent } from './footer/footer.component';
 import { ZapButtonComponent } from './zap-button/zap-button.component';
+import { HeaderAdminComponent } from './header-admin/header-admin.component';
+import { SidenavItemsAdminComponent } from './sidenav-items-admin/sidenav-items-admin.component';
 
 @NgModule({
   declarations: [
     HeaderComponent, 
     SidenavItemsComponent, 
     FooterComponent, 
-    ZapButtonComponent
+    ZapButtonComponent, 
+    HeaderAdminComponent, 
+    SidenavItemsAdminComponent
   ],
   imports: [
     RouterModule,
@@ -21,7 +25,9 @@ import { ZapButtonComponent } from './zap-button/zap-button.component';
     HeaderComponent, 
     SidenavItemsComponent,
     FooterComponent,
-    ZapButtonComponent
+    ZapButtonComponent,
+    HeaderAdminComponent, 
+    SidenavItemsAdminComponent
   ]
 })
 export class CoreModule { 

@@ -1,0 +1,36 @@
+.navigation-container{
+    -webkit-box-shadow: 0 4px 4px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 4px 4px rgba(0,0,0,.25);
+    box-shadow: 0 4px 4px rgba(0,0,0,.25);
+    position: fixed; 
+    z-index:2;
+    background-color: white;
+    padding: 50px; 
+}
+
+a{
+    color: #0BA85B;
+    font-weight: bold;
+    font-size:1.3vw;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    background-color: #0BA85B;
+    font-weight: bold;
+}
+
+.navigation-items{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation-icon{
+    transform: scale(1.7);
+}
+
+h1{
+    font-size: 2rem;
+}
