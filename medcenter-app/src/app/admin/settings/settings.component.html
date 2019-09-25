@@ -1,1 +1,57 @@
-<p>settings works!</p>
+<div fxLayout="column" fxLayoutGap="15px" fxLayoutAlign="center center">
+    <div>
+        <h1 class="primary-color">Configurações gerais</h1>
+        <mat-divider></mat-divider>
+    </div>
+    <div class="box-container">
+        <div fxLayout="row" fxLayoutGap="15px">
+            <mat-form-field appearance="outline">
+                <mat-label>WhatsApp da clinica</mat-label>
+                <input 
+                    mask='(00) 00000-0000' 
+                    matInput 
+                    [formControl]="whatsAppControl"
+                    (focusout)="onInputFocusout(whatsAppControl, 'WhatsApp')">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Telefone da clinica</mat-label>
+                <input 
+                    mask='(00) 0000-0000' 
+                    matInput 
+                    [formControl]="phoneControl"
+                    (focusout)="onInputFocusout(phoneControl, 'Phone')">
+            </mat-form-field>
+        </div>
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Endereço</mat-label>
+            <input 
+                matInput  
+                [formControl]="addressControl"
+                (focusout)="onInputFocusout(addressControl, 'Address')">
+        </mat-form-field>
+        <div fxLayout="row" fxLayoutGap="15px">
+            <mat-form-field appearance="outline">
+                <mat-label>Cnpj da clinica</mat-label>
+                <input 
+                    mask="00.000.000/0000-00" 
+                    matInput
+                    [formControl]="cnpjControl"
+                    (focusout)="onInputFocusout(cnpjControl, 'CNPJ')">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Razão social</mat-label>
+                <input 
+                    matInput
+                    [formControl]="companyNameControl"
+                    (focusout)="onInputFocusout(companyNameControl, 'CompanyName')">
+            </mat-form-field>    
+        </div>
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Responsável técnico</mat-label>
+            <input 
+                matInput
+                [formControl]="techinicalManagerControl"
+                (focusout)="onInputFocusout(techinicalManagerControl, 'TechinicalManager')">
+        </mat-form-field>    
+    </div>
+</div>

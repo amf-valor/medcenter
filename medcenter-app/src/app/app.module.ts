@@ -14,6 +14,9 @@ import { OdontologiaComponent } from './odontologia/odontologia.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './admin/admin.component';
 import { SettingsComponent } from './admin/settings/settings.component';
+import {NgxMaskModule, IConfig} from 'ngx-mask'
+
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
 
 @NgModule({
   declarations: [
@@ -32,6 +35,7 @@ import { SettingsComponent } from './admin/settings/settings.component';
     CoreModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxMaskModule.forRoot(options),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
