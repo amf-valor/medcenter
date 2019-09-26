@@ -6,6 +6,7 @@ import { MedcenterApiService } from 'src/app/_services/medcenter-api.service';
 import { FormControl, Validators } from '@angular/forms';
 import { Setting } from './setting.model';
 import { environment } from 'src/environments/environment';
+import { masks } from 'src/app/_shared/masks';
 
 @Component({
   selector: 'md-admin-settings',
@@ -20,6 +21,8 @@ export class SettingsComponent extends BaseComponent implements OnInit {
   cnpjControl: FormControl;
   companyNameControl: FormControl;
   techinicalManagerControl: FormControl;
+
+  readonly CNPJ_MASK = masks.CNPJ;
 
   constructor(snackBar: MatSnackBar, 
     adminService: AdminService,

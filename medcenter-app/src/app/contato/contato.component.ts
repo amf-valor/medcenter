@@ -3,6 +3,7 @@ import { MedcenterApiService } from '../_services/medcenter-api.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Contato } from './contato.model';
 import { MatSnackBar } from '@angular/material';
+import { masks } from '../_shared/masks';
 
 @Component({
   selector: 'md-contato',
@@ -13,6 +14,7 @@ export class ContatoComponent implements OnInit {
 
   contactForm: FormGroup;
   isProgressVisible: boolean;
+  readonly MOBILE_MASK = masks.MOBILE_PHONE
 
   constructor(
     private medcenterApiService: MedcenterApiService,

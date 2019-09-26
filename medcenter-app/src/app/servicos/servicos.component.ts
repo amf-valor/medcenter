@@ -7,6 +7,7 @@ import { finalize } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { ServicoModel } from './servico.model';
 import { AdminService } from '../_services/admin.service';
+import { masks } from '../_shared/masks';
 
 @Component({
   selector: 'md-servicos',
@@ -22,6 +23,8 @@ export abstract class ServicosComponent extends BaseComponent implements OnInit{
   private nextPage: number;
   private currentPage: number;
   searchValue: string = '';
+  phone: string;
+  PHONE_MASK = masks.PHONE;
 
   get hasNextPages(): boolean{
     return this.nextPage > 0
@@ -42,6 +45,7 @@ export abstract class ServicosComponent extends BaseComponent implements OnInit{
     adminService: AdminService) { 
       super(snackBar, adminService);
       this.model = model;
+      this.medcenterApiService.phone.subscribe(phone => this.phone = phone)
   }
 
   ngOnInit(){

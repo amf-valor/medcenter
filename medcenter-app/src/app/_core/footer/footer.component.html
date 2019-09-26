@@ -10,9 +10,9 @@ class="box-container">
     class="box-container"
     fxFlex="25">
         <img  class="footer-logo" alt="medcenter-logo" src="assets/icons/medcenter-icon152x76.png" />
-        <div>
+        <div fxLayout="row" fxLayoutGap="15px">
             <i class="fas fa-map-marker-alt secondary-color"></i>
-            <span class="span-icon footer-text">    Endereço da clinica em guaianases, 578 | 00000-000</span> 
+            <span class="footer-text">{{address}}</span> 
         </div>
     </div>
     <mat-divider fxHide.xs [vertical]="true"></mat-divider>
@@ -31,19 +31,19 @@ class="box-container">
         <h1 class="secondary-color">Duvidas?</h1>
         <p class="footer-text">
             Queremos te ouvir, se tiver qualquer dúvida
-            sugestão ou reclamação, é só nos <a [routerLink]="" class="secondary-color"><strong>contatar </strong></a>
-            ou ligue: <strong>(11) 99999-9999</strong>
+            sugestão ou reclamação, é só nos <a routerLink="/contato" class="secondary-color"><strong>contatar </strong></a>
+            ou ligue: <strong>{{phone | mask: PHONE_MASK}}</strong>
         </p>
         <p class="footer-text">
             <strong>Horario de atendimento:</strong> de segunda a sexta das 08:00 às 19:00<br/>
-            <strong>CNPJ: </strong>00.000.801/0001-48<br/>
-            <strong>Razão Social: </strong>MedCenter Guaianases 
+            <strong>CNPJ: </strong><span>{{cnpj | mask: CNPJ_MASK}}</span><br/>
+            <strong>Razão Social: </strong><span>{{companyName}}</span> 
         </p>
         <p class="footer-text">
            <strong>Não atendemos emergencia.</strong>
         </p>
         <p class="footer-text">
-            <strong>Responsavel técnico: </strong>Dr.Fulano de tal - CRM-SP 000.000   
+            <strong>Responsavel técnico: </strong><span>{{techinicalManager}}</span>   
         </p>
     </div>
     <mat-divider fxHide.xs [vertical]="true"></mat-divider>

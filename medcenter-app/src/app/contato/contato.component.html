@@ -22,7 +22,7 @@
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Qual seu telefone? somente numeros com DDD ex:11999999999</mat-label>
-                <input matInput formControlName="phone">
+                <input mask="{{MOBILE_MASK}}" matInput formControlName="phone">
                 <mat-error *ngIf="hasError('phone')">
                     telefone só aceita numeros e com o DDD ex: 11986254107
                 </mat-error>

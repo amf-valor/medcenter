@@ -1,24 +1,24 @@
 <a 
-mat-raised-button 
-target="_blank" 
-href=" https://api.whatsapp.com/send?phone=5511956780566&text=Olá%20Medcenter%20guaianases%20gostaria%20de%20agendar%20um%20exame%20ou%20consulta." 
-class="zap-button"
-fxHide.xs>
+    mat-raised-button 
+    target="_blank" 
+    href=" https://api.whatsapp.com/send?phone=5511956780566&text=Olá%20Medcenter%20guaianases%20gostaria%20de%20agendar%20um%20exame%20ou%20consulta." 
+    class="zap-button"
+    fxHide.xs>
     <div 
     fxLayout="row"
     fxLayout.xs="column" 
     fxLayoutGap="15px" 
     class="full-width">
         <i class="fab fa-3x fa-whatsapp zap-icon"></i>
-        <span class="zap-phone">(11) 99999-9999</span>
+        <span class="zap-phone">{{whatsAppNumber | mask: '(00) 00000-0000'}}</span>
     </div>
 </a>
 
 <a 
-mat-fab
-target="_blank" 
-href=" https://api.whatsapp.com/send?phone=5511956780566&text=Olá%20Medcenter%20guaianases%20gostaria%20de%20agendar%20um%20exame%20ou%20consulta."
-class="zap-button"
-fxHide.gt-xs>
+    mat-fab
+    target="_blank" 
+    [href]=whatsAppLink
+    class="zap-button"
+    fxHide.gt-xs>
     <i class="fab fa-3x fa-whatsapp zap-icon"></i>
 </a>

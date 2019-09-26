@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MedcenterApiService } from '../_services/medcenter-api.service';
 
 @Component({
   selector: 'app-medcenter',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MedcenterComponent implements OnInit {
 
-  constructor() { }
+  address: string;
+
+  constructor(private medcenterApiService: MedcenterApiService) { 
+    this.medcenterApiService.address.subscribe(address => {this.address = address})
+  }
 
   ngOnInit() {
   }

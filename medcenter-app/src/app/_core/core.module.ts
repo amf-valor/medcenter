@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ZapButtonComponent } from './zap-button/zap-button.component';
 import { HeaderAdminComponent } from './header-admin/header-admin.component';
 import { SidenavItemsAdminComponent } from './sidenav-items-admin/sidenav-items-admin.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SidenavItemsAdminComponent } from './sidenav-items-admin/sidenav-items-
   ],
   imports: [
     RouterModule,
-    SharedModule
+    SharedModule,
+    NgxMaskModule.forChild()
   ],
   exports: [
     HeaderComponent, 

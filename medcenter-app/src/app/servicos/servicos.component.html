@@ -15,8 +15,8 @@
                         <mat-icon style="font-size: 2em;" matSuffix>search</mat-icon>
                 </mat-form-field>
                 <p class="third-color" fxLayoutAlign="center center">
-                    Caso prefira, telefone já: (11) 99999-9999
-                    <p>
+                    Caso prefira, telefone já: {{phone | mask: PHONE_MASK}}
+                <p>
             </div>
         </div>
         <mat-progress-bar *ngIf="isProgressVisible" mode="indeterminate"></mat-progress-bar>

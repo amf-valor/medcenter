@@ -18,6 +18,7 @@ export class AppComponent extends BaseComponent {
     snackBar: MatSnackBar,
     adminService: AdminService) { 
       super(snackBar, adminService);
+      this.medcenterApiService.getSettings();
   }
 
 }
