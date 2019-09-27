@@ -21,7 +21,8 @@ import {
   MatSidenavModule,
   MatListModule,
   MatStepperModule,
-  MatDividerModule} from '@angular/material';
+  MatDividerModule,
+  MatCheckboxModule} from '@angular/material';
 
 @NgModule({
   declarations: [],
@@ -47,6 +48,7 @@ import {
     MatListModule,
     MatStepperModule,
     MatDividerModule,
+    MatCheckboxModule,
     ReactiveFormsModule,
   ],
   exports:[
@@ -71,6 +73,7 @@ import {
     MatListModule,
     MatStepperModule,
     MatDividerModule,
+    MatCheckboxModule,
     ReactiveFormsModule,
   ]
 })

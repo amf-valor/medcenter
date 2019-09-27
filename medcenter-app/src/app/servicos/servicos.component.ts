@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ServicoResponse } from './servico.response';
+import { ServicoResponse } from './servico.model';
 import { BaseComponent } from '../_core/base.component';
 import { MedcenterApiService } from '../_services/medcenter-api.service';
 import { MatSnackBar } from '@angular/material';

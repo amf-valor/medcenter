@@ -1,0 +1,56 @@
+<div fxLayout="column" fxLayoutGap="15px" fxLayoutAlign="center center">
+    <div>
+        <h2 class="primary-color">Novo serviço</h2>
+        <mat-divider></mat-divider>
+    </div>
+    <form class="full-width" fxLayout="column" fxLayoutGap="15px" [formGroup]="serviceForm">
+        <div fxLayout="column">
+            <mat-form-field appearance="outline">
+                <mat-label>Nome do novo serviço</mat-label>
+                <input matInput formControlName="name">
+            </mat-form-field>
+            <mat-error *ngIf="hasError('name')">
+                nome do novo serviço é obrigatório
+            </mat-error>
+        </div>
+        <div fxLayout="column">
+            <mat-form-field appearance="outline">
+                <mat-label>Preço do novo serviço</mat-label>
+                <input matInput formControlName="price">
+            </mat-form-field>
+            <mat-error *ngIf="hasError('price')">
+                insira apenas numeros e os centavos separado por virgula
+            </mat-error>
+        </div>
+        <div fxLayout="column">
+            <mat-form-field>
+                <mat-label>Tipo de serviço</mat-label>
+                <mat-select matInput formControlName="type">
+                    <mat-option [value]="'exam'">
+                        Exame
+                    </mat-option>
+                    <mat-option [value]="'specialty'">
+                        Especialidade
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-error *ngIf="hasError('type')">
+                Selecione se é um exame ou uma especialidade
+            </mat-error>
+        </div>
+        <mat-checkbox formControlName="isSchedulable">Agendavel</mat-checkbox>
+        <div fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="end">
+            <button 
+                mat-raised-button 
+                (click)="onCancelButtonClick()">
+                    Cancelar
+            </button>
+            <button 
+                mat-raised-button 
+                color="primary"
+                (click)="onSaveButtonClick()">
+                    Salvar
+            </button>        
+        </div>
+    </form>
+</div>

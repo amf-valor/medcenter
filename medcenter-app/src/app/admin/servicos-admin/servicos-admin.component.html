@@ -1,0 +1,12 @@
+<div fxLayout= "column">
+    <mat-progress-bar *ngIf="isProgressVisible" mode="indeterminate"></mat-progress-bar>
+    <div fxLayoutAlign="center center">
+        <h2 class="primary-color">Serviços</h2>
+        <mat-divider></mat-divider>
+    </div>
+    <div class="full-width box-container add-service" fxLayoutAlign="end end">
+        <button (click)="onAddButtonClick()" mat-fab color="primary">
+            <i class="fas fa-plus"></i>
+        </button>    
+    </div>
+</div>

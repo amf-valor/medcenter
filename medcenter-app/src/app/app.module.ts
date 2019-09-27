@@ -14,7 +14,9 @@ import { OdontologiaComponent } from './odontologia/odontologia.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './admin/admin.component';
 import { SettingsComponent } from './admin/settings/settings.component';
-import {NgxMaskModule, IConfig} from 'ngx-mask'
+import {NgxMaskModule, IConfig} from 'ngx-mask';
+import { ServicosAdminComponent } from './admin/servicos-admin/servicos-admin.component';
+import { ServicosDialogComponent } from './admin/servicos-admin/servicos-dialog/servicos-dialog.component'
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
 
@@ -28,7 +30,9 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
     ContatoComponent,
     OdontologiaComponent,
     AdminComponent,
-    SettingsComponent
+    SettingsComponent,
+    ServicosAdminComponent,
+    ServicosDialogComponent
   ],
   imports: [
     SharedModule,
@@ -39,6 +43,7 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
+  entryComponents: [ServicosDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

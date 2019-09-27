@@ -36,5 +36,19 @@ namespace MedcenterApi.Controllers
 
             return Ok(services);
         }
+
+        [HttpPost]
+        public IActionResult Post(ServiceDTO serviceRequest)
+        {
+            int id = _service.Create(serviceRequest);
+            return Ok(new { id });
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            _service.Delete(id);
+            return Ok();
+        }
     }
 }

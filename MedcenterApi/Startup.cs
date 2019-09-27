@@ -37,6 +37,7 @@ namespace MedcenterApi
             {
                 cfg.CreateMap<ServiceEntity, ServiceDTO>();
                 cfg.CreateMap<MedcenterAppSetting, SettingDTO>();
+                cfg.CreateMap<ServiceDTO, ServiceEntity>();
             });
 
             services.AddSingleton(config.CreateMapper());
