@@ -16,7 +16,7 @@
         <md-sidenav-items-admin (sidenavClose)="sidenav.close()"></md-sidenav-items-admin>
     </mat-sidenav>
     <mat-sidenav-content>
-        <md-header-admin (sidenavToggle)="sidenav.toggle()"></md-header-admin>
+        <md-header-admin (sidenavToggle)="sidenav.toggle()" *ngIf="isLogged"></md-header-admin>
         <main>
             <router-outlet></router-outlet>
         </main>

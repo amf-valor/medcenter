@@ -11,14 +11,16 @@ import { AdminService } from './_services/admin.service';
 })
 
 export class AppComponent extends BaseComponent {
-  title = 'medcenter-app';
+
+  isLogged: boolean;
 
   constructor(
     private medcenterApiService: MedcenterApiService,
     snackBar: MatSnackBar,
     adminService: AdminService) { 
       super(snackBar, adminService);
-      this.medcenterApiService.getSettings();
+      this.medcenterApiService.getSettings();//carrega o cache
+      this.medcenterApiService.logged$.subscribe(logged => this.isLogged = logged);
   }
 
 }
