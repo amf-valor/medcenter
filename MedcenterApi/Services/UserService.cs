@@ -23,5 +23,18 @@ namespace MedcenterApi.Services
 
             return password.Equals(user.Password);
         }
+
+        public void ChangePassword(string current, string @new)
+        {
+            var user = _context.Users.Where(u => u.Login.Equals("admin.medcenter")).First();
+
+            if (!user.Password.Equals(current))
+            {
+                throw new IncorrectOldPasswordException("senha atual incorreta");
+            }
+
+            user.Password = @new;
+            _context.SaveChanges();
+        }
     }
 }

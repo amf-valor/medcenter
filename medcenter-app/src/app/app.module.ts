@@ -16,7 +16,8 @@ import { AdminComponent } from './admin/admin.component';
 import { SettingsComponent } from './admin/settings/settings.component';
 import {NgxMaskModule, IConfig} from 'ngx-mask';
 import { ServicosAdminComponent } from './admin/servicos-admin/servicos-admin.component';
-import { ServicosDialogComponent } from './admin/servicos-admin/servicos-dialog/servicos-dialog.component'
+import { ServicosDialogComponent } from './admin/servicos-admin/servicos-dialog/servicos-dialog.component';
+import { ChangePasswordComponent } from './admin/change-password/change-password.component'
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
 
@@ -32,7 +33,8 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
     AdminComponent,
     SettingsComponent,
     ServicosAdminComponent,
-    ServicosDialogComponent
+    ServicosDialogComponent,
+    ChangePasswordComponent
   ],
   imports: [
     SharedModule,

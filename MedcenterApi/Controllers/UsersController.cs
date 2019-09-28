@@ -1,4 +1,5 @@
 ﻿using MedcenterApi.Controllers.Model;
+using MedcenterApi.Services;
 using MedcenterApi.Services.Contract;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -25,6 +26,21 @@ namespace MedcenterApi.Controllers
                 return Ok();
             }
             else
+            {
+                return StatusCode(StatusCodes.Status401Unauthorized);
+            }
+        }
+
+        [HttpPut]
+        [Route("password")]
+        public IActionResult Put([FromBody] ChangePasswordRequest request)
+        {
+            try
+            {
+                _service.ChangePassword(request.CurrentPassword, request.NewPassword);
+                return Ok();
+            }
+            catch (IncorrectOldPasswordException)
             {
                 return StatusCode(StatusCodes.Status401Unauthorized);
             }

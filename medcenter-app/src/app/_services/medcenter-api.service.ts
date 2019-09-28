@@ -8,6 +8,7 @@ import { PagedResponse } from '../_core/paged-response';
 import { ServicoResponse, ServicoRequest } from '../servicos/servico.model';
 import { Credentials } from '../admin/credentials.model';
 import { Setting } from '../admin/settings/setting.model';
+import { ChangePasswordRequest } from '../admin/change-password/change-password.model';
 
 @Injectable({
   providedIn: 'root'
@@ -165,5 +166,16 @@ export class MedcenterApiService {
 
   logout(): void{
     this.loggedSource.next(false);
+  }
+
+  putPassword(request: ChangePasswordRequest): Observable<void>{
+    const httpHeaders = { 'Content-Type': 'application/json'}
+    return this.httpClient.put(
+      `${environment.MEDCENTER_API_ADDRESS}/users/password`,
+       JSON.stringify(request),
+       {headers: httpHeaders})
+      .pipe(map(() => {
+        return Observable.create()
+      }))  
   }
 }
