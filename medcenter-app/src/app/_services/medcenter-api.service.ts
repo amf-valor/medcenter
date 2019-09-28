@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Contato } from '../contato/contato.model';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { PagedResponse } from '../_core/paged-response';
 import { ServicoResponse, ServicoRequest } from '../servicos/servico.model';
@@ -15,6 +15,12 @@ import { Setting } from '../admin/settings/setting.model';
 export class MedcenterApiService {
   
   private settingsCache$: Observable<Setting[]>;
+  private loggedSource: BehaviorSubject<boolean>;
+  public logged$: Observable<boolean>;
+
+  get isLogged(): boolean{
+    return this.loggedSource.value;
+  }
 
   get whatsApp(): Observable<string>{
     return this.settingsCache$
@@ -70,7 +76,10 @@ export class MedcenterApiService {
       )
   }
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient:HttpClient) { 
+    this.loggedSource = new BehaviorSubject<boolean>(false);
+    this.logged$ = this.loggedSource.asObservable();
+  }
 
   postContact(contato:Contato): Observable<void>{
     const httpHeaders = { 'Content-Type': 'application/json'}
@@ -101,7 +110,10 @@ export class MedcenterApiService {
       `${environment.MEDCENTER_API_ADDRESS}/users/authenticate`,
        JSON.stringify(credentials),
        {headers: httpHeaders})
-      .pipe(map(() => {return Observable.create()}))  
+      .pipe(map(() => {
+        this.loggedSource.next(true);
+        return Observable.create()
+      }))  
   }
 
   getSettings(): Observable<Setting[]>{
@@ -149,5 +161,9 @@ export class MedcenterApiService {
       .pipe(map(() => {
         return Observable.create()
       }))  
+  }
+
+  logout(): void{
+    this.loggedSource.next(false);
   }
 }

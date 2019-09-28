@@ -11,6 +11,7 @@ import pt from '@angular/common/locales/pt';
 import { AdminComponent } from './admin/admin.component';
 import { SettingsComponent } from './admin/settings/settings.component';
 import { ServicosAdminComponent } from './admin/servicos-admin/servicos-admin.component';
+import { AuthGuard } from './_services/auth.guard';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -20,8 +21,8 @@ const routes: Routes = [
   {path:'medcenter', component: MedcenterComponent},
   {path:'contato', component: ContatoComponent},
   {path: 'admin', component: AdminComponent},
-  {path: 'admin/settings', component: SettingsComponent},
-  {path: 'admin/services', component: ServicosAdminComponent}
+  {path: 'admin/settings', component: SettingsComponent, canActivate:[AuthGuard]},
+  {path: 'admin/services', component: ServicosAdminComponent, canActivate:[AuthGuard]}
 ];
 
 registerLocaleData(pt);
