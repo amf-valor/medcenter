@@ -133,11 +133,21 @@ export class MedcenterApiService {
       }))  
   }
 
-  postService(service: ServicoRequest): Observable<number>{
+  postService(service: ServicoRequest): Observable<ServicoResponse>{
     const httpHeaders = { 'Content-Type': 'application/json'}
-    return this.httpClient.post<number>(
+    return this.httpClient.post<ServicoResponse>(
       `${environment.MEDCENTER_API_ADDRESS}/services`,
        JSON.stringify(service),
        {headers: httpHeaders})
+  }
+
+  deleteService(id:number):Observable<void>{
+    const httpHeaders = { 'Content-Type': 'application/json'}
+    return this.httpClient.delete(
+      `${environment.MEDCENTER_API_ADDRESS}/services/${id}`,
+       {headers: httpHeaders})
+      .pipe(map(() => {
+        return Observable.create()
+      }))  
   }
 }

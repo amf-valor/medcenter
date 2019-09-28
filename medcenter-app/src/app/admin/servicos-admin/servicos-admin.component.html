@@ -1,12 +1,62 @@
-<div fxLayout= "column">
-    <mat-progress-bar *ngIf="isProgressVisible" mode="indeterminate"></mat-progress-bar>
+<div fxLayout="column" fxLayoutGap="15px">
     <div fxLayoutAlign="center center">
         <h2 class="primary-color">Serviços</h2>
         <mat-divider></mat-divider>
     </div>
-    <div class="full-width box-container add-service" fxLayoutAlign="end end">
-        <button (click)="onAddButtonClick()" mat-fab color="primary">
-            <i class="fas fa-plus"></i>
-        </button>    
+    <div class="box-container" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="30px">
+        <form fxLayout="row" fxLayoutGap="15px" [formGroup]="searchForm">
+            <mat-form-field appearance="outline">
+                <mat-label>Exame ou especialidade</mat-label>
+                <input matInput formControlName="name" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>tipo</mat-label>
+                <mat-select matInput formControlName="type">
+                    <mat-option [value]="'exam'">
+                        Exame
+                    </mat-option>
+                    <mat-option [value]="'specialty'">
+                        Especialidade
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="center center" 
+            style="padding-bottom: 20px">
+                <button mat-raised-button color="primary" (click)="onSearchButtonClick()">Buscar</button>
+                <button (click)="onAddButtonClick()" mat-raised-button color="primary">Novo</button>
+            </div>
+        </form>
+        <mat-spinner *ngIf="isProgressVisible" mode="indeterminate"></mat-spinner>
+        <div style="width: 70%" *ngIf="!isProgressVisible" fxLayout="column" fxLayoutGap="15px">
+            <mat-card class="full-width" *ngFor="let service of pagedResponse.results">
+                <mat-card-content fxLayout="row" fxLayoutGap="30px">
+                    <span fxLayoutAlign="center center" fxFlex="20">
+                        {{service.type == 0 ? 'Especialidade' : 'Exame'}}
+                    </span>
+                    <span fxLayoutAlign="center center" fxFlex="20">
+                        {{service.name}}
+                    </span>
+                    <span fxLayoutAlign="center center" fxFlex="20">
+                        {{service.price | currency:'BRL'}}
+                    </span>
+                    <span fxLayoutAlign="center center" fxFlex="20">
+                        {{service.isSchedulable ? 'agendavel' : 'não agendavel'}}
+                    </span>
+                    <div [hidden]="true">{{service.id}}</div>
+                    <div fxFlex="20" fxLayoutAlign="end end">
+                        <button mat-raised-button color="accent"
+                        (click)="onDeleteButtonClick(service.id)">deletar</button>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="15px" *ngIf="hasPages">
+        <button mat-raised-button color="accent" *ngIf="hasPreviousPages" (click)="onPreviousButtonClick()">
+            anterior
+        </button>
+        <button mat-raised-button color="accent" *ngIf="hasNextPages" (click)="onNextButtonClick()">
+            proxima >
+        </button>
     </div>
 </div>

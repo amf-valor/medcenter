@@ -8,6 +8,7 @@ export interface ServicoResponse{
     id: number;
     name: string;
     price: number;
+    type: string;
     isSchedulable: boolean;
 }
 
