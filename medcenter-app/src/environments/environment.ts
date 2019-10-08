@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  MEDCENTER_API_ADDRESS: "http://192.168.0.18:5000/api"
+  MEDCENTER_API_ADDRESS: "http://localhost:5002/api"
 };
 
 /*

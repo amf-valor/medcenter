@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
+using System;
+using NLog.Web;
+using Microsoft.Extensions.Logging;
 
 namespace MedcenterApi
 {
@@ -8,12 +10,40 @@ namespace MedcenterApi
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            var logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
+
+            try
+            {
+                CreateWebHostBuilder(args).Build().Run();
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "problema ao iniciar a API!");
+                throw;
+            }
+            finally
+            {
+                NLog.LogManager.Shutdown();
+            }
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseUrls("http://0.0.0.0:5000")
-                .UseStartup<Startup>();
+                .UseUrls("http://localhost:5002", "https://localhost:5003")
+                //.UseKestrel(options =>
+                //{
+                //    options.Listen(IPAddress.Loopback, 5002);
+                //    options.Listen(IPAddress.Loopback, 5003, listenOptions =>
+                //    {
+                //        listenOptions.UseHttps("localhost.pfx","localhost");
+                //    });
+                //})
+                .UseStartup<Startup>()
+                .ConfigureLogging(logging =>
+                {
+                    logging.ClearProviders();
+                    logging.SetMinimumLevel(LogLevel.Error);
+                })
+                .UseNLog();  
     }
 }

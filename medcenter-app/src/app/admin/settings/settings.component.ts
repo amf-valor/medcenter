@@ -64,6 +64,10 @@ export class SettingsComponent extends BaseComponent implements OnInit {
       return;
     }
 
+    if(!control.dirty){
+      return;
+    }
+
     const newSetting: Setting = {
       name: settingName,
       value: control.value
